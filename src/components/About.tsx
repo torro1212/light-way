@@ -205,10 +205,10 @@ const About = () => {
               ].map((item, i) => (
                 <div 
                   key={i} 
-                  className={`group p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] bg-white border border-primary/10 hover:border-primary/40 hover:shadow-card transition-all duration-700 hover:-translate-y-4 hover:rotate-1 cursor-default ${cardsVisible[i] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+                  className={`group p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] bg-white border border-primary/10 hover:border-primary/40 hover:shadow-card transition-all duration-700 hover:-translate-y-4 hover:rotate-1 cursor-default text-center ${cardsVisible[i] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
                   style={{ transitionDelay: `${i * 150}ms` }}
                 >
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-primary/5 flex items-center justify-center mb-4 md:mb-6 group-hover:bg-primary group-hover:text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-primary/5 flex items-center justify-center mb-4 md:mb-6 mx-auto group-hover:bg-primary group-hover:text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
                     <item.icon className="w-5 h-5 md:w-6 md:h-6 group-hover:animate-pulse" />
                   </div>
                   <h4 className="font-display text-lg md:text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors duration-500">
