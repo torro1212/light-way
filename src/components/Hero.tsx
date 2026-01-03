@@ -184,12 +184,12 @@ const Hero = () => {
             </div>
 
             {/* Enhanced Main Headline */}
-            <h1 className={`font-display text-5xl sm:text-8xl md:text-9xl lg:text-[11rem] text-primary font-bold leading-[0.85] mb-8 tracking-tight transition-all duration-1000 delay-300 hover:scale-105 cursor-default ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+            <h1 className={`font-display text-6xl sm:text-8xl md:text-9xl lg:text-[11rem] text-primary font-bold leading-[0.9] mb-6 md:mb-8 tracking-tight transition-all duration-1000 delay-300 hover:scale-105 cursor-default ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
               דרך האור
             </h1>
             
             {/* Rotating Subtitle */}
-            <div className={`mb-12 h-12 flex items-center justify-center transition-all duration-1000 delay-600 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`mb-8 md:mb-12 h-12 flex items-center justify-center transition-all duration-1000 delay-600 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
               <span className="text-foreground/80 font-display text-2xl md:text-3xl italic">
                 מקום {' '}
                 <span className="inline-block transition-all duration-500 font-bold text-foreground">
@@ -199,19 +199,19 @@ const Hero = () => {
             </div>
 
             {/* Enhanced Subtitle */}
-            <div className={`max-w-5xl mx-auto mb-12 transition-all duration-1000 delay-800 ${isLoaded ? 'opacity-100 blur-0 translate-y-0' : 'opacity-0 blur-sm translate-y-10'}`}>
-              <p className="font-body text-xl sm:text-3xl md:text-4xl text-foreground/70 leading-relaxed text-balance font-light hover:text-foreground/90 transition-colors duration-500">
-                מסע ריפוי אישי וקבוצתי לנשים שאובחנו כחולות <br />
+            <div className={`max-w-5xl mx-auto mb-8 md:mb-12 transition-all duration-1000 delay-800 ${isLoaded ? 'opacity-100 blur-0 translate-y-0' : 'opacity-0 blur-sm translate-y-10'}`}>
+              <p className="font-body text-lg sm:text-3xl md:text-4xl text-foreground/70 leading-relaxed text-balance font-light hover:text-foreground/90 transition-colors duration-500 px-4">
+                מסע ריפוי אישי וקבוצתי לנשים שאובחנו כחולות <br className="hidden sm:block" />
                 במחלות אוטואימוניות
               </p>
               
               {/* Special Styled Tagline */}
-              <div className="mt-8 md:mt-12 flex items-center justify-center gap-4 group cursor-default">
-                <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-white/90 group-hover:text-white group-hover:rotate-180 transition-all duration-700 drop-shadow-lg" />
-                <p className="font-display text-2xl sm:text-4xl md:text-5xl text-white italic font-bold group-hover:scale-105 transition-transform duration-500 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+              <div className="mt-6 md:mt-12 flex items-center justify-center gap-2 md:gap-4 group cursor-default">
+                <Sparkles className="w-4 h-4 md:w-6 md:h-6 text-white/90 group-hover:text-white group-hover:rotate-180 transition-all duration-700 drop-shadow-lg" />
+                <p className="font-display text-xl sm:text-4xl md:text-5xl text-white italic font-bold group-hover:scale-105 transition-transform duration-500 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
                   לגלות את החוכמה הפנימית של הגוף
                 </p>
-                <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-white/90 group-hover:text-white group-hover:rotate-180 transition-all duration-700 drop-shadow-lg" />
+                <Sparkles className="w-4 h-4 md:w-6 md:h-6 text-white/90 group-hover:text-white group-hover:rotate-180 transition-all duration-700 drop-shadow-lg" />
               </div>
             </div>
             
@@ -228,12 +228,12 @@ const Hero = () => {
             </div>
 
             {/* Enhanced CTA Buttons */}
-            <div className={`flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10 transition-all duration-1000 delay-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-10 w-full px-4 sm:px-0 transition-all duration-1000 delay-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <a
                 href="https://wa.me/972526172932"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative px-12 py-7 md:px-20 md:py-9 rounded-full bg-gradient-to-r from-primary to-primary/90 text-white font-bold text-xl md:text-3xl transition-all duration-500 hover:scale-105 hover:shadow-[0_20px_60px_rgba(var(--primary),0.4)] active:scale-95 overflow-hidden w-full sm:w-auto border-2 border-white/20"
+                className="group relative px-8 py-5 md:px-20 md:py-9 rounded-full bg-gradient-to-r from-primary to-primary/90 text-white font-bold text-lg md:text-3xl transition-all duration-500 hover:scale-105 hover:shadow-[0_20px_60px_rgba(var(--primary),0.4)] active:scale-95 overflow-hidden w-full sm:w-auto border-2 border-white/20"
               >
                 {/* Multiple shimmer effects */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />

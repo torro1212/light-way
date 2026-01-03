@@ -46,26 +46,26 @@ const PersonalStory = () => {
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         {/* Image 1 - Top Right - Polaroid Style */}
         <div 
-          className="absolute top-10 -right-10 md:right-10 w-[60%] md:w-[35%] opacity-[0.25] rotate-6 transition-all duration-1000 hover:rotate-3 hover:scale-105"
+          className="absolute top-5 -right-5 md:top-10 md:right-10 w-[40%] md:w-[35%] opacity-[0.2] md:opacity-[0.25] rotate-6 transition-all duration-1000 hover:rotate-3 hover:scale-105"
         >
-          <div className="bg-white p-3 md:p-4 shadow-xl rounded-xl rotate-2">
+          <div className="bg-white p-2 md:p-4 shadow-xl rounded-lg md:rounded-xl rotate-2">
             <img 
               src={backgrounds[0]} 
               alt="" 
-              className="w-full h-auto object-contain rounded-lg"
+              className="w-full h-auto object-contain rounded-md md:rounded-lg"
             />
           </div>
         </div>
         
         {/* Image 2 - Bottom Left - Polaroid Style */}
         <div 
-          className="absolute bottom-20 -left-10 md:left-10 w-[60%] md:w-[35%] opacity-[0.25] -rotate-3 transition-all duration-1000 hover:-rotate-1 hover:scale-105"
+          className="absolute bottom-10 -left-5 md:bottom-20 md:left-10 w-[40%] md:w-[35%] opacity-[0.2] md:opacity-[0.25] -rotate-3 transition-all duration-1000 hover:-rotate-1 hover:scale-105"
         >
-          <div className="bg-white p-3 md:p-4 shadow-xl rounded-xl -rotate-2">
+          <div className="bg-white p-2 md:p-4 shadow-xl rounded-lg md:rounded-xl -rotate-2">
             <img 
               src={backgrounds[1]} 
               alt="" 
-              className="w-full h-auto object-contain rounded-lg"
+              className="w-full h-auto object-contain rounded-md md:rounded-lg"
             />
           </div>
         </div>

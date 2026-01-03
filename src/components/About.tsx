@@ -48,7 +48,7 @@ const About = () => {
       <div className="absolute top-0 right-0 w-full h-full pointer-events-none z-0 overflow-hidden">
         {/* Large blended image positioned delicately */}
         <div 
-          className="absolute -top-20 -right-20 w-[80%] md:w-[60%] opacity-[0.15] rotate-3 transition-transform duration-1000 hover:scale-105"
+          className="absolute -top-10 -right-10 md:-top-20 md:-right-20 w-[60%] md:w-[60%] opacity-[0.1] md:opacity-[0.15] rotate-3 transition-transform duration-1000 hover:scale-105"
         >
           <img 
             src={aboutBackground} 

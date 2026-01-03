@@ -69,7 +69,7 @@ const Services = () => {
       {/* Artistic Background Image Placement */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
         {/* Floating Image left side */}
-        <div className="absolute top-20 -left-10 w-[70%] md:w-[45%] opacity-[0.2] -rotate-6 transition-transform duration-1000 hover:rotate-0">
+        <div className="absolute top-10 -left-5 md:top-20 md:-left-10 w-[50%] md:w-[45%] opacity-[0.15] md:opacity-[0.2] -rotate-6 transition-transform duration-1000 hover:rotate-0">
            <img 
             src={servicesBackground} 
             alt="" 

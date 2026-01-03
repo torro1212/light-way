@@ -23,7 +23,7 @@ const Contact = () => {
     <section id="contact" className="section-padding bg-background relative overflow-hidden py-32 md:py-48">
       {/* Artistic Background Image Placement */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-        <div className="absolute top-10 -right-10 w-[70%] md:w-[45%] opacity-[0.25] rotate-3 animate-float-slow">
+        <div className="absolute top-5 -right-5 md:top-10 md:-right-10 w-[50%] md:w-[45%] opacity-[0.2] md:opacity-[0.25] rotate-3">
            <img 
             src={contactBackground} 
             alt="" 

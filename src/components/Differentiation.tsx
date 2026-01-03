@@ -53,7 +53,7 @@ const Differentiation = () => {
     >
       {/* Artistic Background Image Placement */}
       <div className="absolute bottom-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-         <div className="absolute -bottom-20 -left-20 w-[80%] md:w-[50%] opacity-[0.2] rotate-12 transition-transform duration-1000 hover:rotate-6">
+         <div className="absolute -bottom-10 -left-10 md:-bottom-20 md:-left-20 w-[60%] md:w-[50%] opacity-[0.15] md:opacity-[0.2] rotate-12 transition-transform duration-1000 hover:rotate-6">
            <img 
             src={differentiationBackground} 
             alt="" 
