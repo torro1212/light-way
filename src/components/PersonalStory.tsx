@@ -1,6 +1,8 @@
 import { Heart, Sparkles, ScrollText, Sunrise, Stars, Wind, Flower2 } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { useScrollReveal, useStaggeredReveal } from '@/hooks/use-scroll-reveal';
+import personalStoryBg1 from '@/assets/personal story.jpg';
+import personalStoryBg2 from '@/assets/Personal Story.png';
 
 const PersonalStory = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,6 +10,8 @@ const PersonalStory = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
   const { ref: cardsRef, visibleItems: cardsVisible } = useStaggeredReveal(4, 100);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const backgrounds = [personalStoryBg1, personalStoryBg2];
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -38,6 +42,35 @@ const PersonalStory = () => {
       ref={sectionRef}
       className="py-32 md:py-48 bg-[#FDFCF8] relative overflow-hidden"
     >
+      {/* Artistic Photo Collage Background */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        {/* Image 1 - Top Right - Polaroid Style */}
+        <div 
+          className="absolute top-10 -right-10 md:right-10 w-[60%] md:w-[35%] opacity-[0.25] rotate-6 transition-all duration-1000 hover:rotate-3 hover:scale-105"
+        >
+          <div className="bg-white p-3 md:p-4 shadow-xl rounded-xl rotate-2">
+            <img 
+              src={backgrounds[0]} 
+              alt="" 
+              className="w-full h-auto object-contain rounded-lg"
+            />
+          </div>
+        </div>
+        
+        {/* Image 2 - Bottom Left - Polaroid Style */}
+        <div 
+          className="absolute bottom-20 -left-10 md:left-10 w-[60%] md:w-[35%] opacity-[0.25] -rotate-3 transition-all duration-1000 hover:-rotate-1 hover:scale-105"
+        >
+          <div className="bg-white p-3 md:p-4 shadow-xl rounded-xl -rotate-2">
+            <img 
+              src={backgrounds[1]} 
+              alt="" 
+              className="w-full h-auto object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+      
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_#000_1px,_transparent_1px)] [background-size:100px_100px]" />
@@ -97,7 +130,7 @@ const PersonalStory = () => {
         />
       </div>
 
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative z-20">
         <div className="max-w-4xl mx-auto">
           
           {/* Section Header */}

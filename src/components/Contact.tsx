@@ -1,6 +1,7 @@
 import { Phone, Mail, MapPin, MessageCircle, Instagram, Facebook, Globe, ArrowUpLeft, Quote, Sparkles, Heart, Stars, Wind, Flower2 } from 'lucide-react';
 import { useScrollReveal, useStaggeredReveal } from '@/hooks/use-scroll-reveal';
 import { useState, useEffect } from 'react';
+import contactBackground from '@/assets/Contact.png';
 
 const Contact = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
@@ -20,6 +21,21 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section-padding bg-background relative overflow-hidden py-32 md:py-48">
+      {/* Artistic Background Image Placement */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        <div className="absolute top-10 -right-10 w-[70%] md:w-[45%] opacity-[0.25] rotate-3 animate-float-slow">
+           <img 
+            src={contactBackground} 
+            alt="" 
+            className="w-full h-auto object-contain rounded-[5rem] shadow-2xl"
+            style={{
+               maskImage: 'linear-gradient(to bottom left, black 50%, transparent 100%)',
+               WebkitMaskImage: 'linear-gradient(to bottom left, black 50%, transparent 100%)'
+            }}
+          />
+        </div>
+      </div>
+      
       {/* Editorial Background Elements */}
       <div className="absolute top-0 right-0 w-full h-full opacity-[0.03] pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_#000_1px,_transparent_1px)] [background-size:40px_40px]" />
@@ -79,7 +95,7 @@ const Contact = () => {
         />
       </div>
       
-      <div className="container-custom relative">
+      <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-32 items-center">
           
           {/* Narrative Side */}

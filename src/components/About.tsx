@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import etiPortrait from '@/assets/eti-about.png';
 import { Sparkles, ArrowDownRight, Quote, Heart } from 'lucide-react';
 import { useScrollReveal, useStaggeredReveal } from '@/hooks/use-scroll-reveal';
+import aboutBackground from '@/assets/Back.png';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,12 +44,30 @@ const About = () => {
       ref={sectionRef}
       className="section-padding bg-background relative overflow-hidden py-32 md:py-48"
     >
+      {/* Artistic Background Image Placement */}
+      <div className="absolute top-0 right-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+        {/* Large blended image positioned delicately */}
+        <div 
+          className="absolute -top-20 -right-20 w-[80%] md:w-[60%] opacity-[0.15] rotate-3 transition-transform duration-1000 hover:scale-105"
+        >
+          <img 
+            src={aboutBackground} 
+            alt="" 
+            className="w-full h-auto object-contain rounded-[3rem]"
+            style={{
+              maskImage: 'linear-gradient(to bottom left, black 40%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom left, black 40%, transparent 100%)'
+            }}
+          />
+        </div>
+      </div>
+      
       {/* Decorative Modern Background */}
       <div className="absolute top-0 right-0 w-full h-full opacity-[0.02] pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_#000_1px,_transparent_1px)] [background-size:60px_60px]" />
       </div>
 
-      <div className="container-custom relative">
+      <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-32 items-center">
           
           {/* Visual Canvas - 5 Columns */}

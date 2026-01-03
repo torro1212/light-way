@@ -1,6 +1,8 @@
 import { Calendar, Users, Clock, Sparkles, Stars, Wind, Flower2, Heart, CheckCircle2 } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { useScrollReveal } from '@/hooks/use-scroll-reveal';
+import servicesBackground from '@/assets/services.jpg';
+import backImage from '@/assets/Back.png';
 
 const Services = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
@@ -64,6 +66,22 @@ const Services = () => {
 
   return (
     <section id="services" className="section-padding bg-background relative overflow-hidden">
+      {/* Artistic Background Image Placement */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+        {/* Floating Image left side */}
+        <div className="absolute top-20 -left-10 w-[70%] md:w-[45%] opacity-[0.2] -rotate-6 transition-transform duration-1000 hover:rotate-0">
+           <img 
+            src={servicesBackground} 
+            alt="" 
+            className="w-full h-auto object-contain rounded-[4rem] shadow-2xl"
+            style={{
+              maskImage: 'linear-gradient(to right, black 50%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to right, black 50%, transparent 100%)'
+            }}
+          />
+        </div>
+      </div>
+      
       {/* Modern Background Texture */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -120,7 +138,7 @@ const Services = () => {
         />
       </div>
 
-      <div className="container-custom relative">
+      <div className="container-custom relative z-10">
         {/* Header Section */}
         <div 
           ref={headerRef as React.RefObject<HTMLDivElement>}
@@ -228,38 +246,49 @@ const Services = () => {
         </div>
 
         {/* Monthly Structure - Timeline */}
-        <div className="mb-20 md:mb-32">
-          <h3 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 md:mb-8 text-center">
-            מבנה חודשי – <span className="font-numeric">10</span> חודשים
-          </h3>
-          <p className="text-lg md:text-xl text-foreground/60 font-body text-center mb-8 md:mb-12 max-w-3xl mx-auto">
-            כל חודש במסע מוקדש לנושא אחר, עם מפגשים שבועיים שמעמיקים בו
-          </p>
-          
-          <div className="max-w-4xl mx-auto space-y-4 md:space-y-6">
-            {monthlyStructure.map((item, i) => (
-              <div 
-                key={i}
-                onClick={() => setExpandedMonth(expandedMonth === i ? null : i)}
-                className="group cursor-pointer"
-              >
-                <div className="flex items-center gap-6 md:gap-8 p-6 md:p-8 rounded-2xl md:rounded-3xl bg-white/50 backdrop-blur-xl border-2 border-primary/10 hover:border-primary/30 hover:shadow-xl transition-all duration-500">
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500">
-                    <span className="font-numeric text-2xl md:text-3xl font-bold text-white">
-                      {item.month}
-                    </span>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-display text-lg md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-                      {item.title}
-                    </h4>
-                  </div>
-                  <div className={`w-8 h-8 rounded-full border-2 border-primary/30 flex items-center justify-center transition-transform duration-500 ${expandedMonth === i ? 'rotate-180' : ''}`}>
-                    <span className="text-primary text-xl">↓</span>
+        <div className="mb-20 md:mb-32 relative">
+          {/* Background Image for Monthly Structure */}
+          <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-[3rem]">
+            <img 
+              src={backImage} 
+              alt="" 
+              className="w-full h-full object-cover opacity-10"
+            />
+          </div>
+
+          <div className="relative z-10">
+            <h3 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 md:mb-8 text-center">
+              מבנה חודשי – <span className="font-numeric">10</span> חודשים
+            </h3>
+            <p className="text-lg md:text-xl text-foreground/60 font-body text-center mb-8 md:mb-12 max-w-3xl mx-auto">
+              כל חודש במסע מוקדש לנושא אחר, עם מפגשים שבועיים שמעמיקים בו
+            </p>
+            
+            <div className="max-w-4xl mx-auto space-y-4 md:space-y-6">
+              {monthlyStructure.map((item, i) => (
+                <div 
+                  key={i}
+                  onClick={() => setExpandedMonth(expandedMonth === i ? null : i)}
+                  className="group cursor-pointer"
+                >
+                  <div className="flex items-center gap-6 md:gap-8 p-6 md:p-8 rounded-2xl md:rounded-3xl bg-white/50 backdrop-blur-xl border-2 border-primary/10 hover:border-primary/30 hover:shadow-xl transition-all duration-500">
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500">
+                      <span className="font-numeric text-2xl md:text-3xl font-bold text-white">
+                        {item.month}
+                      </span>
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-display text-lg md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                        {item.title}
+                      </h4>
+                    </div>
+                    <div className={`w-8 h-8 rounded-full border-2 border-primary/30 flex items-center justify-center transition-transform duration-500 ${expandedMonth === i ? 'rotate-180' : ''}`}>
+                      <span className="text-primary text-xl">↓</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 

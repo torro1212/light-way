@@ -1,5 +1,6 @@
 import { Heart, Sparkles, Shield, Leaf, Quote, MousePointer2 } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
+import differentiationBackground from '@/assets/Differentiation.jpg';
 
 const values = [
   {
@@ -50,6 +51,21 @@ const Differentiation = () => {
       ref={containerRef}
       className="section-padding bg-background relative overflow-hidden py-32 md:py-48"
     >
+      {/* Artistic Background Image Placement */}
+      <div className="absolute bottom-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+         <div className="absolute -bottom-20 -left-20 w-[80%] md:w-[50%] opacity-[0.2] rotate-12 transition-transform duration-1000 hover:rotate-6">
+           <img 
+            src={differentiationBackground} 
+            alt="" 
+            className="w-full h-auto object-contain rounded-[3rem] shadow-2xl"
+             style={{
+              maskImage: 'linear-gradient(to top right, black 40%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to top right, black 40%, transparent 100%)'
+            }}
+          />
+        </div>
+      </div>
+      
       {/* Dynamic Modern Background */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -66,7 +82,7 @@ const Differentiation = () => {
       <div className="absolute top-1/4 left-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px] animate-blob" />
       <div className="absolute bottom-1/4 right-10 w-64 h-64 bg-secondary/10 rounded-full blur-[100px] animate-blob animation-delay-2000" />
 
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative z-20">
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-32 space-y-6 md:space-y-8">
           <div className="inline-flex items-center gap-4 px-6 py-2 rounded-full bg-white/40 backdrop-blur-xl border border-white/60 shadow-soft animate-fade-in">
