@@ -1,132 +1,186 @@
-import { Phone, Mail, MapPin, MessageCircle, Instagram, Facebook, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Instagram, Facebook, Globe, ArrowUpLeft, Quote, Sparkles, Heart, Stars, Wind, Flower2 } from 'lucide-react';
+import { useScrollReveal, useStaggeredReveal } from '@/hooks/use-scroll-reveal';
+import { useState, useEffect } from 'react';
 
 const Contact = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
+  const { ref: cardsRef, visibleItems: cardsVisible } = useStaggeredReveal(3, 100);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 30;
+      const y = (e.clientY / window.innerHeight - 0.5) * 30;
+      setMousePos({ x, y });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
-    <section id="contact" className="section-padding bg-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-50">
-        <img
-          src="https://oeitonzscptlisblqtoc.supabase.co/storage/v1/object/public/project-assets/-/ai-contact_background-1766042119018.png"
-          alt=""
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-background/80 to-background" />
+    <section id="contact" className="section-padding bg-background relative overflow-hidden py-32 md:py-48">
+      {/* Editorial Background Elements */}
+      <div className="absolute top-0 right-0 w-full h-full opacity-[0.03] pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_#000_1px,_transparent_1px)] [background-size:40px_40px]" />
       </div>
 
+      {/* Enhanced Background with Parallax */}
+      <div 
+        className="absolute top-1/4 right-0 w-96 h-96 bg-primary/8 rounded-full blur-[120px] transition-transform duration-500"
+        style={{ transform: `translate(${mousePos.x * 0.5}px, ${mousePos.y * 0.5}px)` }}
+      />
+      <div 
+        className="absolute bottom-1/4 left-0 w-[30rem] h-[30rem] bg-secondary/8 rounded-full blur-[140px] transition-transform duration-500"
+        style={{ transform: `translate(${mousePos.x * -0.4}px, ${mousePos.y * -0.4}px)` }}
+      />
+
+      {/* Floating Decorative Icons */}
+      <div className="absolute inset-0 pointer-events-none">
+        <Sparkles 
+          className="absolute top-[20%] left-[10%] w-8 h-8 text-primary/20 animate-float" 
+          style={{ 
+            transform: `translate(${mousePos.x * -0.3}px, ${mousePos.y * -0.3}px)`,
+            transition: 'transform 0.3s ease-out',
+            animationDelay: '0s' 
+          }} 
+        />
+        <Heart 
+          className="absolute bottom-[30%] right-[8%] w-7 h-7 text-secondary/20 fill-secondary/10 animate-float" 
+          style={{ 
+            transform: `translate(${mousePos.x * 0.4}px, ${mousePos.y * 0.4}px) rotate(${mousePos.x * 2}deg)`,
+            transition: 'transform 0.3s ease-out',
+            animationDelay: '1.5s' 
+          }} 
+        />
+        <Stars 
+          className="absolute top-[60%] left-[6%] w-7 h-7 text-primary/15 animate-float" 
+          style={{ 
+            transform: `translate(${mousePos.x * -0.25}px, ${mousePos.y * -0.25}px)`,
+            transition: 'transform 0.3s ease-out',
+            animationDelay: '3s' 
+          }} 
+        />
+        <Wind 
+          className="absolute top-[35%] right-[15%] w-9 h-9 text-secondary/15 animate-float" 
+          style={{ 
+            transform: `translate(${mousePos.x * 0.3}px, ${mousePos.y * 0.3}px)`,
+            transition: 'transform 0.3s ease-out',
+            animationDelay: '4.5s' 
+          }} 
+        />
+        <Flower2 
+          className="absolute bottom-[15%] left-[12%] w-8 h-8 text-primary/15 animate-float" 
+          style={{ 
+            transform: `translate(${mousePos.x * -0.2}px, ${mousePos.y * -0.2}px)`,
+            transition: 'transform 0.3s ease-out',
+            animationDelay: '6s' 
+          }} 
+        />
+      </div>
+      
       <div className="container-custom relative">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-          {/* Contact Info */}
-          <div className="animate-slide-up">
-            <span className="inline-block text-secondary font-body text-sm tracking-widest uppercase mb-4">
-              צרי קשר
-            </span>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-6">
-              בואי נתחיל את
-              <span className="text-gradient-gold block">המסע שלך</span>
-            </h2>
-            <div className="decorative-line mb-8 !mx-0" />
+        <div className="grid lg:grid-cols-12 gap-16 lg:gap-32 items-center">
+          
+          {/* Narrative Side */}
+          <div 
+            ref={headerRef as React.RefObject<HTMLDivElement>}
+            className="lg:col-span-6 space-y-12 md:space-y-16 px-2 md:px-0"
+          >
+            <div className={`space-y-6 md:space-y-10 transition-all duration-1000 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <div className="flex items-center gap-4 group">
+                <span className="text-primary font-body text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] py-2 px-4 bg-primary/5 rounded-full group-hover:bg-primary/10 group-hover:scale-105 transition-all duration-500">
+                  צרי קשר
+                </span>
+                <div className="flex-1 h-px bg-gradient-to-l from-primary/30 to-transparent group-hover:from-primary/60 transition-all duration-700" />
+                <Sparkles className="w-4 h-4 text-primary/40 group-hover:text-primary group-hover:rotate-180 transition-all duration-700" />
+              </div>
 
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              אשמח לשמוע ממך ולענות על כל שאלה. פגישת היכרות ראשונה ללא התחייבות.
-            </p>
+              <h2 className="font-display text-4xl sm:text-7xl md:text-8xl font-bold text-foreground leading-[1.1] md:leading-[0.9] tracking-tighter">
+                בואי נתחיל את <br />
+                <span className="text-gradient-gold italic font-medium inline-block hover:scale-105 transition-transform duration-500 cursor-default">
+                  המסע שלך
+                </span>
+              </h2>
 
-            {/* Contact Details */}
-            <div className="space-y-6 mb-8">
-              <a
-                href="tel:052-970-6731"
-                className="flex items-center gap-4 group"
-              >
-                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
-                  <Phone className="w-5 h-5 text-secondary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">טלפון</p>
-                  <p className="font-medium text-foreground" dir="ltr">052-970-6731</p>
-                </div>
-              </a>
-
-              <a
-                href="mailto:eti.dayan@gmail.com"
-                className="flex items-center gap-4 group"
-              >
-                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
-                  <Mail className="w-5 h-5 text-secondary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">אימייל</p>
-                  <p className="font-medium text-foreground">eti.dayan@gmail.com</p>
-                </div>
-              </a>
-
-              <a
-                href="https://www.google.com/maps/place/?q=place_id:ChIJHUnzwzRLHRUR2ZaWxEUhIb0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 group"
-              >
-                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
-                  <MapPin className="w-5 h-5 text-secondary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">כתובת</p>
-                  <p className="font-medium text-foreground">תובל 40, קומה 22, רמת גן</p>
-                </div>
-              </a>
+              <p className="text-xl md:text-2xl text-foreground/60 font-body font-light leading-relaxed max-w-xl group hover:text-foreground/80 transition-colors duration-500 cursor-default">
+                אם משהו בתוכך מרגיש שזה הזמן לעצור, להקשיב ולבחור בדרך אחרת – אפשר פשוט לשלוח הודעה.
+              </p>
             </div>
 
-            {/* Social Links */}
-            <div className="flex gap-4 mb-8">
-              <a
-                href="https://instagram.com/eti.dayan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center hover:bg-secondary hover:border-secondary hover:text-white transition-all"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://facebook.com/share"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center hover:bg-secondary hover:border-secondary hover:text-white transition-all"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.ester-law.co.il/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center hover:bg-secondary hover:border-secondary hover:text-white transition-all"
-              >
-                <Globe className="w-5 h-5" />
-              </a>
+            {/* Contact Info - WhatsApp Only */}
+            <div className="space-y-8 md:space-y-12">
+              <div className="p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] bg-white border border-primary/10 hover:border-primary/40 hover:shadow-card hover:-translate-y-4 hover:scale-105 transition-all duration-700 relative overflow-hidden max-w-md">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 hover:from-primary/8 hover:to-secondary/8 transition-all duration-700" />
+                <div className="relative z-10">
+                  <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 hover:bg-primary hover:text-white hover:scale-110 hover:rotate-12 transition-all duration-500 shadow-sm">
+                    <MessageCircle className="w-6 h-6" />
+                  </div>
+                  <p className="font-body text-[10px] font-bold uppercase tracking-[0.4em] text-secondary mb-2">וואטסאפ</p>
+                  <p className="font-numeric text-2xl font-bold text-foreground" dir="ltr">052-617-2932</p>
+                </div>
+              </div>
             </div>
 
-            {/* WhatsApp CTA */}
-            <a
-              href="https://wa.me/972529706731"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold inline-flex items-center gap-3"
-            >
-              <MessageCircle className="w-5 h-5" />
-              <span>שלחי הודעה בוואטסאפ</span>
-            </a>
+            {/* Social & CTA Section */}
+            <div className="flex flex-col sm:flex-row items-center gap-8 md:gap-10 pt-4 md:pt-8">
+              <a
+                href="https://wa.me/972526172932"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative px-10 py-6 md:px-12 md:py-6 rounded-full bg-primary text-white font-bold text-lg md:text-xl transition-all duration-500 hover:scale-105 hover:shadow-[0_20px_60px_rgba(var(--primary),0.4)] overflow-hidden flex items-center justify-center gap-4 w-full sm:w-auto ripple-effect"
+                style={{
+                  transform: `perspective(1000px) rotateX(${mousePos.y * -0.02}deg) rotateY(${mousePos.x * 0.02}deg)`,
+                  transition: 'transform 0.3s ease-out, box-shadow 0.7s, scale 0.7s',
+                }}
+              >
+                {/* Enhanced Shimmer Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                
+                {/* Pulsing Ring */}
+                <div className="absolute inset-0 rounded-full border-2 border-white/40 animate-ping opacity-0 group-hover:opacity-100" />
+                <div className="absolute inset-0 rounded-full border-2 border-white/30 scale-110 animate-ping opacity-0 group-hover:opacity-100" style={{ animationDelay: '0.5s' }} />
+                
+                <MessageCircle className="w-6 h-6 relative z-10 group-hover:rotate-6 group-hover:scale-105 transition-transform duration-400" />
+                <span className="relative z-10 group-hover:tracking-wider transition-all duration-300">להרשמה ופרטים נוספים</span>
+              </a>
+              
+              <p className="text-sm md:text-base text-foreground/50 font-body text-center sm:text-right">
+                כתבי הודעה, ואשמח לחזור אלייך 🤍
+              </p>
+
+              <div className="flex gap-4">
+                {[Instagram, Facebook, Globe].map((Icon, i) => (
+                  <a
+                    key={i}
+                    href="#"
+                    className="w-12 h-12 md:w-14 md:h-14 rounded-2xl border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white hover:border-primary hover:scale-110 hover:rotate-12 transition-all duration-500 shadow-sm hover:shadow-card"
+                    style={{ transitionDelay: `${i * 50}ms` }}
+                  >
+                    <Icon className="w-5 h-5 group-hover:animate-pulse" />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* Map */}
-          <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <div className="h-full min-h-[400px] rounded-2xl overflow-hidden shadow-card">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.0!2d34.8!3d32.08!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b34c3f34921%3A0xbd21214584962d99!2z16rXldeo15zXmSDXlNeV15HXnCDXqNee16og15LXnw!5e0!3m2!1siw!2sil!4v1703000000000!5m2!1siw!2sil"
-                width="100%"
-                height="100%"
-                style={{ border: 0, minHeight: '400px' }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="מיקום הקליניקה"
-              />
+          {/* Visual Side with Quote */}
+          <div 
+            className="lg:col-span-6 relative mt-12 lg:mt-0 flex items-center justify-center"
+            style={{
+              transform: `translate(${mousePos.x * 0.2}px, ${mousePos.y * 0.2}px)`,
+              transition: 'transform 0.3s ease-out',
+            }}
+          >
+            <div className="relative p-12 md:p-20 rounded-[3rem] md:rounded-[4rem] bg-foreground text-white text-center space-y-8 md:space-y-12 transition-all duration-1000 transform overflow-hidden group hover:scale-105 cursor-default max-w-2xl">
+              {/* Animated background gradients */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] group-hover:scale-150 transition-transform duration-1000" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 rounded-full blur-[100px] group-hover:scale-150 transition-transform duration-1000" />
+              
+              <Quote className="w-16 h-16 md:w-20 md:h-20 text-primary/20 mx-auto relative z-10 group-hover:text-primary/30 group-hover:scale-110 transition-all duration-700" />
+              <p className="text-foreground font-display text-2xl sm:text-4xl md:text-5xl font-bold italic leading-relaxed relative z-10 text-white/90 group-hover:text-white transition-colors duration-500">
+                "אפשר לנשום פה. מישהו מבין אותי. זו לא מכירה – זו הזמנה."
+              </p>
             </div>
           </div>
         </div>
