@@ -45,24 +45,24 @@ const Header = () => {
       <div className="container-custom px-4 sm:px-8">
         <nav className="flex items-center justify-between">
           {/* Logo Section */}
-          <a href="#" className="group flex items-center gap-5">
-            <div className="flex flex-col items-center gap-2">
+          <a href="#" className="group flex items-center gap-2 sm:gap-4 md:gap-5">
+            <div className="flex flex-col items-center gap-1 sm:gap-2">
               <div className="relative">
                 <div className="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150" />
                 <img 
                   src={logo} 
                   alt="דרך האור" 
-                  className="h-24 md:h-28 w-24 md:w-28 object-contain relative z-10 transition-all duration-500 group-hover:rotate-[10deg] group-hover:scale-110"
+                  className="h-16 sm:h-20 md:h-24 lg:h-28 w-16 sm:w-20 md:w-24 lg:w-28 object-contain relative z-10 transition-all duration-500 group-hover:rotate-[10deg] group-hover:scale-110"
                 />
               </div>
-              <span className={`font-body text-sm md:text-base uppercase tracking-[0.3em] font-bold transition-colors duration-500 whitespace-nowrap ${
+              <span className={`font-body text-[0.5rem] sm:text-xs md:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] font-bold transition-colors duration-500 whitespace-nowrap ${
                 isScrolled ? 'text-primary' : 'text-primary/80'
               }`}>
                 דרך האור
               </span>
             </div>
-            <div className="flex flex-col border-r border-white/20 pr-5 transition-all duration-500 group-hover:border-secondary/40">
-              <span className={`font-display text-2xl font-bold tracking-tight transition-colors duration-500 ${
+            <div className="hidden sm:flex flex-col border-r border-white/20 pr-3 md:pr-5 transition-all duration-500 group-hover:border-secondary/40">
+              <span className={`font-display text-lg sm:text-xl md:text-2xl font-bold tracking-tight transition-colors duration-500 ${
                 isScrolled ? 'text-foreground' : 'text-white'
               }`}>
                 אתי אסתר דיין

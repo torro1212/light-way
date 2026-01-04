@@ -42,7 +42,8 @@ const About = () => {
     <section 
       id="about" 
       ref={sectionRef}
-      className="section-padding bg-background relative overflow-hidden py-32 md:py-48"
+      className="section-padding relative overflow-hidden py-32 md:py-48"
+      style={{ background: 'linear-gradient(to bottom, #faf9f5, #f0f0e8, #e8e8e0)' }}
     >
       {/* Artistic Background Image Placement */}
       <div className="absolute top-0 right-0 w-full h-full pointer-events-none z-0 overflow-hidden">
@@ -133,7 +134,7 @@ const About = () => {
 
               <h2 
                 ref={titleRef as React.RefObject<HTMLHeadingElement>}
-                className={`font-display text-4xl sm:text-7xl md:text-8xl font-bold text-foreground leading-[1.1] md:leading-[0.9] tracking-tighter transition-all duration-1000 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                className={`font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] md:leading-[1] tracking-tighter transition-all duration-1000 px-4 text-center md:text-right ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               >
                 מרחב של <br />
                 <span className="text-gradient-gold italic font-medium inline-block hover:scale-105 transition-transform duration-500 cursor-default">
@@ -230,11 +231,11 @@ const About = () => {
             </div>
 
             {/* Bottom Insight Card */}
-            <div className={`relative p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] bg-foreground text-white overflow-hidden group transition-all duration-1000 delay-700 transform hover:scale-[1.02] cursor-default ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+            <div className={`relative p-6 sm:p-8 md:p-10 lg:p-12 rounded-[2rem] md:rounded-[3rem] bg-foreground text-white overflow-hidden group transition-all duration-1000 delay-700 transform hover:scale-[1.02] cursor-default ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
               <div className="absolute top-0 right-0 w-48 h-48 md:w-64 md:h-64 bg-primary/20 rounded-full blur-[80px] md:blur-[100px] group-hover:scale-150 transition-transform duration-1000" />
               <div className="absolute bottom-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-secondary/20 rounded-full blur-[60px] md:blur-[80px] group-hover:scale-150 transition-transform duration-1000" />
-              <Quote className="w-12 h-12 md:w-16 md:h-16 text-primary/20 absolute -bottom-2 md:-bottom-4 -left-2 md:-left-4 group-hover:text-primary/30 group-hover:scale-110 transition-all duration-700" />
-              <p className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl italic leading-relaxed relative z-10 text-white/90 group-hover:text-white transition-colors duration-500">
+              <Quote className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-primary/20 absolute -bottom-2 md:-bottom-4 -left-2 md:-left-4 group-hover:text-primary/30 group-hover:scale-110 transition-all duration-700" />
+              <p className="font-display text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl italic leading-relaxed relative z-10 text-white/90 group-hover:text-white transition-colors duration-500 px-2 sm:px-4 md:px-6 text-center">
                 "הגוף יודע לרפא את עצמו, הוא רק צריך שנפסיק להילחם בו ונתחיל להקשיב לו"
               </p>
               

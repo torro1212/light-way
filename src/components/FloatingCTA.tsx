@@ -43,7 +43,7 @@ const FloatingCTA = () => {
         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-secondary via-primary to-secondary opacity-0 group-hover:opacity-40 blur-xl transition-all duration-700 animate-gradient" />
         
         {/* Main Button */}
-        <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-secondary to-secondary/80 flex items-center justify-center shadow-gold transition-all duration-400 group-hover:scale-110 group-active:scale-95 group-hover:shadow-2xl overflow-hidden">
+        <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-secondary to-secondary/80 flex items-center justify-center shadow-gold transition-all duration-400 group-hover:scale-110 group-hover:shadow-2xl overflow-hidden">
           {/* Shimmer Effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
           

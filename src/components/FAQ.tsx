@@ -42,7 +42,7 @@ const FAQ = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
 
   return (
-    <section id="faq" className="section-padding bg-cream/30 relative overflow-hidden">
+    <section id="faq" className="section-padding relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, #f0f0e8, #faf9f5, #f0f0e8)' }}>
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white to-transparent" />
       
@@ -60,7 +60,7 @@ const FAQ = () => {
               </span>
               <Sparkles className="w-3 h-3 text-secondary/60" />
             </div>
-            <h2 className={`font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight transition-all duration-1000 delay-300 px-4 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h2 className={`font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight transition-all duration-1000 delay-300 px-4 text-center ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               אני כאן לכל <span className="text-gradient-gold italic inline-block hover:scale-105 transition-transform duration-500 cursor-default">שאלה נוספת</span>
             </h2>
             <div className={`decorative-line mx-auto relative overflow-hidden transition-all duration-1000 delay-500 ${headerVisible ? 'opacity-100 w-16' : 'opacity-0 w-0'}`}>

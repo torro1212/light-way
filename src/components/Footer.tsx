@@ -28,7 +28,7 @@ const Footer = () => {
                 <span className="font-display text-2xl md:text-3xl font-bold text-white tracking-tight group-hover/logo:text-secondary transition-colors duration-500">אתי אסתר דיין</span>
               </div>
             </a>
-            <p className="text-white/60 text-sm sm:text-base md:text-lg leading-relaxed max-w-md font-body mx-auto md:mx-0 hover:text-white/80 transition-colors duration-500 px-4 md:px-0">
+            <p className="text-white/60 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed max-w-md font-body mx-auto md:mx-0 hover:text-white/80 transition-colors duration-500 px-2 sm:px-4 md:px-0 text-center md:text-right">
               מסע ריפוי אישי וקבוצתי <br />
               למתמודדים עם מחלות אוטואימוניות. מרחב בטוח של הקשבה, ליווי והתחברות פנימית.
             </p>
@@ -91,13 +91,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 md:mt-24 pt-8 md:pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 text-center">
-          <div className="flex items-center gap-2 text-xs md:text-sm text-white/30 font-body">
+        <div className="mt-16 md:mt-24 pt-8 md:pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 md:gap-8 text-center px-2 sm:px-4">
+          <div className="flex flex-wrap items-center justify-center gap-2 text-[0.65rem] sm:text-xs md:text-sm text-white/30 font-body">
             <span>נבנה בדיוק והקשבה</span>
-            <Heart className="w-3 h-3 md:w-4 md:h-4 text-secondary fill-secondary animate-pulse" />
+            <Heart className="w-3 h-3 md:w-4 md:h-4 text-secondary fill-secondary animate-pulse flex-shrink-0" />
             <span>עבור אתי אסתר דיין</span>
           </div>
-          <p className="text-white/20 text-[10px] md:text-xs font-body tracking-widest">
+          <p className="text-white/20 text-[9px] sm:text-[10px] md:text-xs font-body tracking-wider sm:tracking-widest">
             © {new Date().getFullYear()} ETTI ESTER DAYAN. ALL RIGHTS RESERVED.
           </p>
         </div>

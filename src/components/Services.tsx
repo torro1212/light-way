@@ -65,7 +65,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="section-padding bg-background relative overflow-hidden">
+    <section id="services" className="section-padding relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, #faf9f5, #f0f0e8, #e8e8e0)' }}>
       {/* Artistic Background Image Placement */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
         {/* Floating Image left side */}
@@ -153,11 +153,11 @@ const Services = () => {
               <div className="w-12 md:w-16 h-0.5 bg-primary group-hover:w-20 md:group-hover:w-24 transition-all duration-700" />
             </div>
             
-            <h2 className="font-display text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-primary leading-[1.1] mb-6 md:mb-8 px-4">
+            <h2 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary leading-[1.1] mb-4 sm:mb-6 md:mb-8 px-4 text-center">
               דרך האור
             </h2>
             
-            <p className="font-display text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-primary/80 italic font-medium mb-4 md:mb-6 px-6">
+            <p className="font-display text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-primary/80 italic font-medium mb-3 sm:mb-4 md:mb-6 px-4 sm:px-6 text-center">
               מסע ריפוי אישי וקבוצתי למתמודדים עם מחלות אוטואימוניות
             </p>
 
@@ -292,10 +292,10 @@ const Services = () => {
 
         {/* Key Quote */}
         <div className="mb-20 md:mb-32">
-          <div className="relative p-12 md:p-20 rounded-[2rem] md:rounded-[3rem] bg-foreground text-white overflow-hidden group">
+          <div className="relative p-6 sm:p-8 md:p-12 lg:p-16 xl:p-20 rounded-[2rem] md:rounded-[3rem] bg-foreground text-white overflow-hidden group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] group-hover:scale-150 transition-transform duration-1000" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-secondary/20 rounded-full blur-[80px] group-hover:scale-150 transition-transform duration-1000" />
-            <p className="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl italic leading-relaxed relative z-10 text-center text-white/90 group-hover:text-white transition-colors duration-500 px-6">
+            <p className="font-display text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl italic leading-relaxed relative z-10 text-center text-white/90 group-hover:text-white transition-colors duration-500 px-2 sm:px-4 md:px-6">
               "הגוף יודע לרפא את עצמו, הוא רק צריך שנפסיק להילחם בו ונתחיל להקשיב לו"
             </p>
           </div>

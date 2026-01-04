@@ -20,7 +20,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" className="section-padding bg-background relative overflow-hidden py-32 md:py-48">
+    <section id="contact" className="section-padding relative overflow-hidden py-32 md:py-48" style={{ background: 'linear-gradient(to bottom, #faf9f5, #f0f0e8, #e8e8e0)' }}>
       {/* Artistic Background Image Placement */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute top-5 -right-5 md:top-10 md:-right-10 w-[50%] md:w-[45%] opacity-[0.2] md:opacity-[0.25] rotate-3">
@@ -112,15 +112,15 @@ const Contact = () => {
                 <Sparkles className="w-4 h-4 text-primary/40 group-hover:text-primary group-hover:rotate-180 transition-all duration-700" />
               </div>
 
-              <h2 className="font-display text-4xl sm:text-7xl md:text-8xl font-bold text-foreground leading-[1.1] md:leading-[0.9] tracking-tighter">
-                בואי נתחיל את <br />
+              <h2 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] tracking-tighter text-center md:text-right">
+                בואו נתחיל את <br />
                 <span className="text-gradient-gold italic font-medium inline-block hover:scale-105 transition-transform duration-500 cursor-default">
-                  המסע שלך
+                  המסע שלכם
                 </span>
               </h2>
 
-              <p className="text-xl md:text-2xl text-foreground/60 font-body font-light leading-relaxed max-w-xl group hover:text-foreground/80 transition-colors duration-500 cursor-default">
-                אם משהו בתוכך/ך מרגיש שזה הזמן לעצור, להקשיב ולבחור בדרך אחרת – אפשר פשוט לשלוח הודעה.
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/60 font-body font-light leading-relaxed max-w-xl group hover:text-foreground/80 transition-colors duration-500 cursor-default">
+                אם משהו בפנים מרגיש שזה הזמן לעצור, להקשיב ולבחור בדרך אחרת – אפשר פשוט לשלוח הודעה.
               </p>
             </div>
 
@@ -193,8 +193,8 @@ const Contact = () => {
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] group-hover:scale-150 transition-transform duration-1000" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 rounded-full blur-[100px] group-hover:scale-150 transition-transform duration-1000" />
               
-              <Quote className="w-16 h-16 md:w-20 md:h-20 text-primary/20 mx-auto relative z-10 group-hover:text-primary/30 group-hover:scale-110 transition-all duration-700" />
-              <p className="text-foreground font-display text-2xl sm:text-4xl md:text-5xl font-bold italic leading-relaxed relative z-10 text-white/90 group-hover:text-white transition-colors duration-500">
+              <Quote className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 text-primary/20 mx-auto relative z-10 group-hover:text-primary/30 group-hover:scale-110 transition-all duration-700" />
+              <p className="text-foreground font-display text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold italic leading-relaxed relative z-10 text-white/90 group-hover:text-white transition-colors duration-500 px-2 sm:px-4 md:px-6 text-center">
                 "אפשר לנשום פה. מישהו מבין אותי. זו לא מכירה – זו הזמנה."
               </p>
             </div>

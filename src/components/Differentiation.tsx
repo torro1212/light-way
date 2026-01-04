@@ -49,7 +49,8 @@ const Differentiation = () => {
   return (
     <section 
       ref={containerRef}
-      className="section-padding bg-background relative overflow-hidden py-32 md:py-48"
+      className="section-padding relative overflow-hidden py-32 md:py-48"
+      style={{ background: 'linear-gradient(to bottom, #e8e8e0, #f0f0e8, #faf9f5)' }}
     >
       {/* Artistic Background Image Placement */}
       <div className="absolute bottom-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
@@ -90,7 +91,7 @@ const Differentiation = () => {
             <span className="text-primary font-body text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] md:tracking-[0.5em]">למה לבחור בי</span>
           </div>
           
-          <h2 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground leading-[1.1] md:leading-none tracking-tighter px-4">
+          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] md:leading-[1] tracking-tighter px-4 text-center">
             מה מייחד את <br />
             <span className="text-primary italic font-medium">דרך האור</span>
           </h2>
@@ -129,27 +130,27 @@ const Differentiation = () => {
 
         {/* Vision Statement Section */}
         <div className="mt-24 md:mt-48 max-w-5xl mx-auto">
-          <div className="relative p-10 md:p-24 rounded-[3rem] md:rounded-[4rem] bg-foreground text-white overflow-hidden group">
+          <div className="relative p-6 sm:p-8 md:p-12 lg:p-16 xl:p-24 rounded-[2.5rem] md:rounded-[3rem] lg:rounded-[4rem] bg-foreground text-white overflow-hidden group">
             {/* Animated Background Overlay */}
             <div 
               className="absolute top-0 right-0 w-[30rem] md:w-[40rem] h-[30rem] md:h-[40rem] bg-primary/20 rounded-full blur-[100px] md:blur-[120px] transition-transform duration-1000 group-hover:scale-125"
               style={{ transform: `translate(${mousePos.x * 50}px, ${mousePos.y * 50}px)` }}
             />
             
-            <Quote className="w-16 h-16 md:w-24 md:h-24 text-primary/10 absolute top-8 right-8 md:top-12 md:right-12 animate-float" />
+            <Quote className="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 text-primary/10 absolute top-6 right-6 sm:top-8 sm:right-8 md:top-12 md:right-12 animate-float" />
             
-            <div className="relative z-10 space-y-8 md:space-y-12 text-center px-6">
-              <p className="font-display text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl italic leading-relaxed md:leading-[1.2] font-medium text-white/90">
+            <div className="relative z-10 space-y-6 sm:space-y-8 md:space-y-12 text-center px-2 sm:px-4 md:px-6">
+              <p className="font-display text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl italic leading-relaxed font-medium text-white/90">
                 "אתם לא מקולקלים. הגוף שלכם לא נגדכם. <br />
                 יש כאן תהליך, יש ליווי ויש זמן. <br />
                 אתם לא לבד".
               </p>
               
-              <div className="flex flex-col items-center gap-4 md:gap-6">
-                <div className="w-12 md:w-16 h-px bg-primary/40" />
+              <div className="flex flex-col items-center gap-3 sm:gap-4 md:gap-6">
+                <div className="w-10 sm:w-12 md:w-16 h-px bg-primary/40" />
                 <div className="flex flex-col items-center">
-                  <span className="text-primary font-body text-xs md:text-sm font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] mb-1 md:mb-2">אתי אסתר דיין</span>
-                  <span className="text-white/40 font-body text-[8px] md:text-[10px] uppercase tracking-[0.2em]">מנחת מסעות ריפוי</span>
+                  <span className="text-primary font-body text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.5em] mb-1 md:mb-2">אתי אסתר דיין</span>
+                  <span className="text-white/40 font-body text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.2em]">מנחת מסעות ריפוי</span>
                 </div>
               </div>
             </div>

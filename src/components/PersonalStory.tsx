@@ -40,7 +40,8 @@ const PersonalStory = () => {
     <section 
       id="my-story"
       ref={sectionRef}
-      className="py-32 md:py-48 bg-[#FDFCF8] relative overflow-hidden"
+      className="py-32 md:py-48 relative overflow-hidden"
+      style={{ background: 'linear-gradient(to bottom, #e8e8e0, #f0f0e8, #faf9f5)' }}
     >
       {/* Artistic Photo Collage Background */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
@@ -145,7 +146,7 @@ const PersonalStory = () => {
               </span>
               <Stars className="w-3 h-3 text-primary/40 group-hover:text-primary group-hover:rotate-180 transition-all duration-700" />
             </div>
-            <h2 className={`font-display text-4xl sm:text-6xl md:text-7xl font-bold text-foreground leading-[1.1] tracking-tighter transition-all duration-1000 delay-300 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h2 className={`font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] tracking-tighter transition-all duration-1000 delay-300 px-4 text-center ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               למה יצרתי את <br />
               <span className="text-primary italic font-medium inline-block hover:scale-105 transition-transform duration-500 cursor-default">
                 דרך האור
@@ -158,13 +159,13 @@ const PersonalStory = () => {
             
             {/* Intro Thought */}
             <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <div className="relative p-8 md:p-16 rounded-[2rem] md:rounded-[3rem] bg-white border border-primary/10 shadow-soft overflow-hidden group hover:shadow-card hover:scale-[1.02] hover:border-primary/20 transition-all duration-700 cursor-default">
+              <div className="relative p-6 sm:p-8 md:p-12 lg:p-16 rounded-[2rem] md:rounded-[3rem] bg-white border border-primary/10 shadow-soft overflow-hidden group hover:shadow-card hover:scale-[1.02] hover:border-primary/20 transition-all duration-700 cursor-default">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 group-hover:scale-150 group-hover:bg-primary/10 transition-all duration-1000" />
-                <p className="font-display text-xl sm:text-3xl md:text-4xl text-foreground leading-relaxed italic text-center relative z-10 group-hover:text-foreground/90 transition-colors duration-500">
+                <p className="font-display text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-foreground leading-relaxed italic text-center relative z-10 group-hover:text-foreground/90 transition-colors duration-500 px-2">
                   "אצל רבים מאיתנו, נשים במיוחד, הגוף לוקח על עצמו תפקיד שהנפש כבר לא יכלה לשאת לבד"
                 </p>
-                <div className="mt-8 flex justify-center">
-                  <Heart className="w-6 h-6 md:w-8 md:h-8 text-primary/20 fill-primary/10 group-hover:text-primary/40 group-hover:fill-primary/20 group-hover:scale-110 transition-all duration-500" />
+                <div className="mt-6 md:mt-8 flex justify-center">
+                  <Heart className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-primary/20 fill-primary/10 group-hover:text-primary/40 group-hover:fill-primary/20 group-hover:scale-110 transition-all duration-500" />
                 </div>
               </div>
             </div>
@@ -245,10 +246,10 @@ const PersonalStory = () => {
                   <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary/10 flex items-center justify-center shadow-lg animate-pulse">
                     <Sunrise className="w-8 h-8 md:w-10 md:h-10 text-primary" />
                   </div>
-                  <h3 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight">משהו בי התחיל לשאול...</h3>
-                  <div className="max-w-2xl space-y-6 md:space-y-8 font-body text-lg md:text-xl text-foreground/70 leading-relaxed italic">
+                  <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight px-4 text-center">משהו בי התחיל לשאול...</h3>
+                  <div className="max-w-2xl space-y-6 md:space-y-8 font-body text-base sm:text-lg md:text-xl text-foreground/70 leading-relaxed italic px-4">
                     <p>התחלתי לקרוא, לחפש מידע, לחפש תשובות.</p>
-                    <p className="text-xl md:text-2xl font-bold text-foreground not-italic">
+                    <p className="text-lg sm:text-xl md:text-2xl font-bold text-foreground not-italic text-center">
                       "אם הגוף שלי יודע לפגוע בעצמו, <br />
                       אולי הוא גם יודע להבריא את עצמו?"
                     </p>
@@ -307,28 +308,28 @@ const PersonalStory = () => {
             </div>
 
             {/* The Final Confirmation */}
-            <div className={`relative p-10 md:p-24 rounded-[3rem] md:rounded-[4rem] bg-foreground text-white text-center space-y-8 md:space-y-12 transition-all duration-1000 transform overflow-hidden group hover:scale-[1.02] cursor-default ${isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
+            <div className={`relative p-6 sm:p-8 md:p-12 lg:p-16 xl:p-24 rounded-[2.5rem] md:rounded-[3rem] lg:rounded-[4rem] bg-foreground text-white text-center space-y-6 sm:space-y-8 md:space-y-12 transition-all duration-1000 transform overflow-hidden group hover:scale-[1.02] cursor-default ${isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
               {/* Animated background gradients */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] group-hover:scale-150 transition-transform duration-1000" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 rounded-full blur-[100px] group-hover:scale-150 transition-transform duration-1000" />
               
-              <div className="space-y-4 relative z-10">
-                <span className="text-primary font-body text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] group-hover:tracking-[0.6em] transition-all duration-500">הניצחון של הרוח</span>
-                <h3 className="font-display text-2xl sm:text-5xl md:text-6xl font-bold leading-tight group-hover:scale-105 transition-transform duration-500">
+              <div className="space-y-3 sm:space-y-4 relative z-10">
+                <span className="text-primary font-body text-[9px] sm:text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.5em] group-hover:tracking-[0.4em] md:group-hover:tracking-[0.6em] transition-all duration-500">הניצחון של הרוח</span>
+                <h3 className="font-display text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight group-hover:scale-105 transition-transform duration-500 px-2 sm:px-4">
                   "הכול תקין. אין זכר למה שמתועד בתיק הרפואי."
                 </h3>
               </div>
               
-              <p className="text-base md:text-xl text-white/60 max-w-2xl mx-auto font-body leading-relaxed italic relative z-10 group-hover:text-white/80 transition-colors duration-500">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/60 max-w-2xl mx-auto font-body leading-relaxed italic relative z-10 group-hover:text-white/80 transition-colors duration-500 px-2 sm:px-4">
                 היום אני כאן, בריאה, חיה ובהודיה עמוקה לגוף שלי. הסיפור שלי אינו הבטחה, הוא עדות לכך שלגוף יש חוכמה עמוקה, וכשהוא מקבל הקשבה ותנאים מיטיבים - <br />
                 ייתכן שינוי משמעותי.
               </p>
 
-              <div className="pt-4 md:pt-8 relative z-10">
+              <div className="pt-3 sm:pt-4 md:pt-8 relative z-10">
                 <div className="inline-flex flex-col items-center group/heart">
-                  <div className="w-16 md:w-24 h-px bg-primary/40 mb-4 md:mb-6 group-hover/heart:w-24 md:group-hover/heart:w-32 group-hover/heart:bg-primary/60 transition-all duration-700" />
-                  <p className="font-display text-xl md:text-2xl italic font-medium group-hover/heart:scale-110 transition-transform duration-500">אני כאן בשבילך</p>
-                  <Heart className="w-5 h-5 mt-4 text-primary/40 fill-primary/20 group-hover/heart:text-primary group-hover/heart:fill-primary/30 group-hover/heart:scale-125 transition-all duration-500" />
+                  <div className="w-12 sm:w-16 md:w-24 h-px bg-primary/40 mb-3 sm:mb-4 md:mb-6 group-hover/heart:w-16 sm:group-hover/heart:w-24 md:group-hover/heart:w-32 group-hover/heart:bg-primary/60 transition-all duration-700" />
+                  <p className="font-display text-base sm:text-lg md:text-xl lg:text-2xl italic font-medium group-hover/heart:scale-110 transition-transform duration-500">אני כאן בשבילך</p>
+                  <Heart className="w-4 h-4 sm:w-5 sm:h-5 mt-3 sm:mt-4 text-primary/40 fill-primary/20 group-hover/heart:text-primary group-hover/heart:fill-primary/30 group-hover/heart:scale-125 transition-all duration-500" />
                 </div>
               </div>
             </div>

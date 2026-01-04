@@ -63,7 +63,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section id="testimonials" className="section-padding relative overflow-hidden bg-white">
+    <section id="testimonials" className="section-padding relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, #e8e8e0, #f5f5f0, #f0f0e8)' }}>
       {/* Enhanced Dynamic Background with Parallax */}
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-1/4" />
@@ -127,7 +127,7 @@ const Testimonials = () => {
               </span>
               <Sparkles className="w-4 h-4 text-primary/40 group-hover:text-primary group-hover:rotate-180 transition-all duration-700" />
             </div>
-            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-foreground leading-[1.1] md:leading-none">
+            <h2 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] md:leading-none px-4 text-center md:text-right">
               הדים של <br />
               <span className="text-gradient-gold italic font-medium inline-block hover:scale-105 transition-transform duration-500 cursor-default">
                 שינוי וריפוי
