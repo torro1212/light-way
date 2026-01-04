@@ -28,9 +28,9 @@ const Footer = () => {
                 <span className="font-display text-2xl md:text-3xl font-bold text-white tracking-tight group-hover/logo:text-secondary transition-colors duration-500">אתי אסתר דיין</span>
               </div>
             </a>
-            <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-md font-body mx-auto md:mx-0 hover:text-white/80 transition-colors duration-500">
-              מסע ריפוי אישי וקבוצתי לנשים שאובחנו כחולות <br />
-              במחלות אוטואימוניות. מרחב בטוח של הקשבה, ליווי והתחברות פנימית.
+            <p className="text-white/60 text-sm sm:text-base md:text-lg leading-relaxed max-w-md font-body mx-auto md:mx-0 hover:text-white/80 transition-colors duration-500 px-4 md:px-0">
+              מסע ריפוי אישי וקבוצתי <br />
+              למתמודדים עם מחלות אוטואימוניות. מרחב בטוח של הקשבה, ליווי והתחברות פנימית.
             </p>
             <div className="flex justify-center md:justify-start gap-4">
               {[

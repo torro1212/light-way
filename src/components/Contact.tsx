@@ -120,7 +120,7 @@ const Contact = () => {
               </h2>
 
               <p className="text-xl md:text-2xl text-foreground/60 font-body font-light leading-relaxed max-w-xl group hover:text-foreground/80 transition-colors duration-500 cursor-default">
-                אם משהו בתוכך מרגיש שזה הזמן לעצור, להקשיב ולבחור בדרך אחרת – אפשר פשוט לשלוח הודעה.
+                אם משהו בתוכך/ך מרגיש שזה הזמן לעצור, להקשיב ולבחור בדרך אחרת – אפשר פשוט לשלוח הודעה.
               </p>
             </div>
 

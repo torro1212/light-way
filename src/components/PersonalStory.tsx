@@ -336,7 +336,7 @@ const PersonalStory = () => {
             {/* Conclusion CTA */}
             <div className="text-center max-w-2xl mx-auto space-y-8 md:space-y-10">
               <p className="text-lg md:text-2xl text-foreground font-body leading-relaxed group hover:text-foreground/90 transition-colors duration-500 cursor-default">
-                הסיפור האישי שלי כולל מסע מרתק של ריפוי עצמי ממחלה אוטואימונית, תהליך של גילוי חוכמת הגוף והכוח הפנימי לריפוי. חוויותיי האישיות והמקצועיות מאפשרות לי להוביל אתכן במסע הזה בביטחון, הקשבה ותמיכה לאורך כל הדרך.
+                הסיפור האישי שלי כולל מסע מרתק של ריפוי עצמי ממחלה אוטואימונית, תהליך של גילוי חוכמת הגוף והכוח הפנימי לריפוי. חוויותיי האישיות והמקצועיות מאפשרות לי להוביל אתכם/ן במסע הזה בביטחון, הקשבה ותמיכה לאורך כל הדרך.
               </p>
               <a 
                 href="#contact"

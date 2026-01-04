@@ -90,7 +90,7 @@ const Differentiation = () => {
             <span className="text-primary font-body text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] md:tracking-[0.5em]">למה לבחור בי</span>
           </div>
           
-          <h2 className="font-display text-4xl sm:text-7xl md:text-8xl font-bold text-foreground leading-[1.1] md:leading-none tracking-tighter">
+          <h2 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground leading-[1.1] md:leading-none tracking-tighter px-4">
             מה מייחד את <br />
             <span className="text-primary italic font-medium">דרך האור</span>
           </h2>
@@ -138,11 +138,11 @@ const Differentiation = () => {
             
             <Quote className="w-16 h-16 md:w-24 md:h-24 text-primary/10 absolute top-8 right-8 md:top-12 md:right-12 animate-float" />
             
-            <div className="relative z-10 space-y-8 md:space-y-12 text-center">
-              <p className="font-display text-2xl sm:text-5xl md:text-6xl italic leading-relaxed md:leading-[1.2] font-medium text-white/90">
-                "את לא מקולקלת. הגוף שלך לא נגדך. <br />
+            <div className="relative z-10 space-y-8 md:space-y-12 text-center px-6">
+              <p className="font-display text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl italic leading-relaxed md:leading-[1.2] font-medium text-white/90">
+                "אתם לא מקולקלים. הגוף שלכם לא נגדכם. <br />
                 יש כאן תהליך, יש ליווי ויש זמן. <br />
-                את לא לבד".
+                אתם לא לבד".
               </p>
               
               <div className="flex flex-col items-center gap-4 md:gap-6">

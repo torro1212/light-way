@@ -26,7 +26,7 @@ const Services = () => {
   const programDetails = [
     { icon: Calendar, label: 'מפגש שבועי', detail: 'פעם בשבוע' },
     { icon: Clock, label: '18:00-21:00', detail: '3 שעות' },
-    { icon: Users, label: 'עד 10 משתתפות', detail: 'קבוצה קטנה ומחוייבת' },
+    { icon: Users, label: 'עד 10 משתתפים ומשתתפות', detail: 'קבוצה קטנה ומחוייבת' },
     { icon: Heart, label: '10 חודשים', detail: 'מסע מלא' }
   ];
 
@@ -153,15 +153,14 @@ const Services = () => {
               <div className="w-12 md:w-16 h-0.5 bg-primary group-hover:w-20 md:group-hover:w-24 transition-all duration-700" />
             </div>
             
-            <h2 className="font-display text-4xl sm:text-7xl md:text-8xl font-bold text-primary leading-[1.1] mb-6 md:mb-8">
+            <h2 className="font-display text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-primary leading-[1.1] mb-6 md:mb-8 px-4">
               דרך האור
             </h2>
             
-            <p className="font-display text-2xl sm:text-4xl md:text-5xl text-primary/80 italic font-medium mb-4 md:mb-6">
-              מסע ריפוי אישי וקבוצתי לנשים שאובחנו כחולות <br />
-              במחלות אוטואימוניות
+            <p className="font-display text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-primary/80 italic font-medium mb-4 md:mb-6 px-6">
+              מסע ריפוי אישי וקבוצתי למתמודדים עם מחלות אוטואימוניות
             </p>
-            
+
             <p className="text-xl md:text-3xl text-foreground/70 font-body font-light leading-relaxed mb-4">
               לגלות את החוכמה הפנימית של הגוף
             </p>
@@ -179,9 +178,8 @@ const Services = () => {
               <h3 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-4">
                 קבוצה טיפולית תהליכית – <span className="font-numeric">10</span> חודשים
               </h3>
-              <p className="text-lg md:text-2xl text-foreground/60 font-body italic">
-                מרחב נשי, עמוק ובטוח, למסע של הקשבה לגוף, חיבור פנימי ותהליך ריפוי לנשים שאובחנו כחולות <br />
-                במחלות אוטואימוניות
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/60 font-body italic px-4">
+                מרחב בטוח, עמוק ומכיל, למסע של הקשבה לגוף, חיבור פנימי ותהליך ריפוי למתמודדים עם מחלות אוטואימוניות
               </p>
             </div>
             
@@ -204,8 +202,8 @@ const Services = () => {
         </div>
 
         {/* What's Included */}
-        <div className="mb-20 md:mb-32">
-          <h3 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-8 md:mb-12 text-center">
+        <div className="mb-20 md:mb-32 px-6">
+          <h3 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 md:mb-12 text-center">
             מה כוללת התוכנית
           </h3>
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
@@ -224,8 +222,8 @@ const Services = () => {
         </div>
 
         {/* Tools Learned */}
-        <div className="mb-20 md:mb-32">
-          <h3 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-8 md:mb-12 text-center">
+        <div className="mb-20 md:mb-32 px-6">
+          <h3 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 md:mb-12 text-center">
             כלים נלמדים לאורך התהליך
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -256,8 +254,8 @@ const Services = () => {
             />
           </div>
 
-          <div className="relative z-10">
-            <h3 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 md:mb-8 text-center">
+          <div className="relative z-10 px-6">
+            <h3 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 md:mb-8 text-center">
               מבנה חודשי – <span className="font-numeric">10</span> חודשים
             </h3>
             <p className="text-lg md:text-xl text-foreground/60 font-body text-center mb-8 md:mb-12 max-w-3xl mx-auto">
@@ -297,7 +295,7 @@ const Services = () => {
           <div className="relative p-12 md:p-20 rounded-[2rem] md:rounded-[3rem] bg-foreground text-white overflow-hidden group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] group-hover:scale-150 transition-transform duration-1000" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-secondary/20 rounded-full blur-[80px] group-hover:scale-150 transition-transform duration-1000" />
-            <p className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl italic leading-relaxed relative z-10 text-center text-white/90 group-hover:text-white transition-colors duration-500">
+            <p className="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl italic leading-relaxed relative z-10 text-center text-white/90 group-hover:text-white transition-colors duration-500 px-6">
               "הגוף יודע לרפא את עצמו, הוא רק צריך שנפסיק להילחם בו ונתחיל להקשיב לו"
             </p>
           </div>
@@ -310,8 +308,8 @@ const Services = () => {
               דרך האור
             </h3>
             <p className="text-lg md:text-2xl text-foreground/70 font-body leading-relaxed mb-8 md:mb-10">
-              אם משהו בתוכך מרגיש שזה הזמן להקשיב, להעמיק, ולצאת למסע –<br />
-              את מוזמנת ליצור קשר ולקבל פרטים נוספים.
+              אם משהו בפנים מרגיש שזה הזמן להקשיב, להעמיק, ולצאת למסע –<br />
+              מוזמנים ומוזמנות ליצור קשר ולקבל פרטים נוספים.
             </p>
             
             <a
