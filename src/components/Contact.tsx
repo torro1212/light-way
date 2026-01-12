@@ -133,7 +133,7 @@ const Contact = () => {
                     <MessageCircle className="w-6 h-6" />
                   </div>
                   <p className="font-body text-[10px] font-bold uppercase tracking-[0.4em] text-secondary mb-2">וואטסאפ</p>
-                  <p className="font-numeric text-2xl font-bold text-foreground" dir="ltr">052-617-2932</p>
+                  <a href="https://wa.me/972526172932" target="_blank" rel="noopener noreferrer" className="font-numeric text-2xl font-bold text-foreground hover:text-primary transition-colors" dir="ltr">052-617-2932</a>
                 </div>
               </div>
             </div>
@@ -195,7 +195,7 @@ const Contact = () => {
               
               <Quote className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 text-primary/20 mx-auto relative z-10 group-hover:text-primary/30 group-hover:scale-110 transition-all duration-700" />
               <p className="text-foreground font-display text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold italic leading-relaxed relative z-10 text-white/90 group-hover:text-white transition-colors duration-500 px-2 sm:px-4 md:px-6 text-center">
-                "אפשר לנשום פה. מישהו מבין אותי. זו לא מכירה – זו הזמנה."
+                "אפשר לנשום פה. מישהו מבין אותי. זו הזמנה..."
               </p>
             </div>
           </div>

@@ -181,7 +181,9 @@ const Hero = () => {
             </div>
 
             {/* Enhanced Main Headline */}
-            <h1 className={`font-display text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] text-primary font-bold leading-[0.9] mb-4 sm:mb-6 md:mb-8 tracking-tight transition-all duration-1000 delay-300 px-4 text-center ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+            <h1 
+              className={`font-display text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] text-primary font-bold leading-[0.9] mb-4 sm:mb-6 md:mb-8 tracking-tight transition-all duration-1000 delay-300 px-4 text-center text-outline-strong ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+            >
               דרך האור
             </h1>
             
@@ -197,9 +199,9 @@ const Hero = () => {
 
             {/* Enhanced Subtitle */}
             <div className={`max-w-5xl mx-auto mb-6 sm:mb-8 md:mb-12 transition-all duration-1000 delay-800 px-4 sm:px-6 md:px-8 ${isLoaded ? 'opacity-100 blur-0 translate-y-0' : 'opacity-0 blur-sm translate-y-10'}`}>
-              <p className="font-body text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-foreground/70 leading-relaxed text-balance font-light transition-colors duration-500 text-center">
+              <p className="font-body text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-foreground/85 leading-relaxed text-balance font-normal transition-colors duration-500 text-center">
                 מסע ריפוי אישי וקבוצתי <br />
-                למתמודדים עם מחלות אוטואימוניות
+                למתמודדים עם מחלה אוטואימונית
               </p>
               
               {/* Special Styled Tagline */}

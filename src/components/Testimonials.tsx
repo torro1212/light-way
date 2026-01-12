@@ -229,7 +229,7 @@ const Testimonials = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-[length:200%_100%] animate-shimmer" />
             <span className="relative z-10 font-display text-lg md:text-2xl font-bold group-hover:scale-105 transition-all duration-500">מרגיש לך נכון לצאת לדרך האור?</span>
             <div className="relative z-10 flex items-center gap-3 md:gap-4">
-              <span className="font-display text-lg md:text-2xl font-bold group-hover:scale-105 transition-all duration-500">לחצי</span>
+              <span className="font-display text-lg md:text-2xl font-bold group-hover:scale-105 transition-all duration-500">כאן</span>
               <Heart className="w-6 h-6 md:w-8 md:h-8 transition-transform group-hover:scale-125 group-hover:fill-white/30" />
             </div>
             

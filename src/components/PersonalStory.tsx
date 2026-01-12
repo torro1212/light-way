@@ -187,16 +187,16 @@ const PersonalStory = () => {
                 </div>
               </div>
 
-              <div className={`p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] bg-foreground text-white space-y-6 md:space-y-8 transition-all duration-1000 delay-400 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white/10 flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+              <div className={`p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] space-y-6 md:space-y-8 transition-all duration-1000 delay-400 transform shadow-2xl border-2 border-primary/30 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`} style={{ background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)' }}>
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white/15 flex items-center justify-center shadow-lg">
+                  <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-primary drop-shadow-md" />
                 </div>
                 <div className="space-y-4">
-            <p className="text-lg md:text-xl font-display italic">
+            <p className="text-xl md:text-2xl lg:text-3xl font-display italic font-bold text-primary drop-shadow-lg leading-relaxed">
               "לפני <span className="font-numeric">27</span> שנים אובחנתי כחולה במחלה אוטואימונית קשה."
             </p>
-                  <div className="h-px bg-white/10 w-16 md:w-24" />
-                  <p className="text-xs md:text-sm text-white/60 font-body leading-relaxed">
+                  <div className="h-px bg-primary/60 w-16 md:w-24 shadow-lg" />
+                  <p className="text-base md:text-lg lg:text-xl text-white font-body leading-relaxed font-semibold drop-shadow-md">
                     3 שבועות אחרי לידה שקטה, הופיעו אצלי סימנים ראשונים למחלה. נאמר לי שזו מחלה כרונית לכל החיים ושעליי להיערך לחיים של תרופות וטיפולים.
                   </p>
                 </div>
@@ -226,10 +226,10 @@ const PersonalStory = () => {
                 ].map((item, i) => (
                   <div 
                     key={i} 
-                    className={`p-4 md:p-6 rounded-2xl md:rounded-3xl bg-white border border-primary/5 text-center shadow-sm hover:shadow-card hover:border-primary/20 hover:-translate-y-2 hover:scale-105 transition-all duration-500 cursor-default group ${cardsVisible[i] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                    className={`p-4 md:p-6 rounded-2xl md:rounded-3xl bg-gradient-to-br from-primary/15 to-primary/25 border-2 border-primary/30 text-center shadow-md hover:shadow-card hover:border-primary/40 hover:-translate-y-2 hover:scale-105 transition-all duration-500 cursor-default group ${cardsVisible[i] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                     style={{ transitionDelay: `${i * 100}ms` }}
                   >
-                    <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-primary/40 group-hover:text-primary/60 group-hover:tracking-[0.2em] transition-all duration-500">{item}</span>
+                    <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-foreground/80 group-hover:text-foreground group-hover:tracking-[0.2em] transition-all duration-500">{item}</span>
                   </div>
                 ))}
               </div>
@@ -257,19 +257,19 @@ const PersonalStory = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-                  <div className="p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] bg-primary/5 border border-primary/10 text-center hover:bg-primary/10 transition-colors duration-500">
-                    <p className="font-display text-base md:text-lg font-bold text-primary">מה הגוף שלי מנסה לעצור?</p>
+                  <div className="p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] bg-gradient-to-br from-primary/20 to-primary/30 border-2 border-primary/40 text-center hover:from-primary/30 hover:to-primary/40 hover:border-primary/50 hover:shadow-lg transition-all duration-500">
+                    <p className="font-display text-base md:text-lg font-bold text-foreground drop-shadow-sm">מה הגוף שלי מנסה לעצור?</p>
                   </div>
-                  <div className="p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] bg-primary/5 border border-primary/10 text-center hover:bg-primary/10 transition-colors duration-500">
-                    <p className="font-display text-base md:text-lg font-bold text-primary">
+                  <div className="p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] bg-gradient-to-br from-primary/20 to-primary/30 border-2 border-primary/40 text-center hover:from-primary/30 hover:to-primary/40 hover:border-primary/50 hover:shadow-lg transition-all duration-500">
+                    <p className="font-display text-base md:text-lg font-bold text-foreground drop-shadow-sm">
                       איזה עומס הגוף שלי כבר לא מוכן לשאת?
                     </p>
                   </div>
-                  <div className="p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] bg-primary/5 border border-primary/10 text-center hover:bg-primary/10 transition-colors duration-500">
-                    <p className="font-display text-base md:text-lg font-bold text-primary">איך המחלה משרתת אותי?</p>
+                  <div className="p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] bg-gradient-to-br from-primary/20 to-primary/30 border-2 border-primary/40 text-center hover:from-primary/30 hover:to-primary/40 hover:border-primary/50 hover:shadow-lg transition-all duration-500">
+                    <p className="font-display text-base md:text-lg font-bold text-foreground drop-shadow-sm">איך המחלה משרתת אותי?</p>
                   </div>
-                  <div className="p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] bg-primary/5 border border-primary/10 text-center hover:bg-primary/10 transition-colors duration-500">
-                    <p className="font-display text-base md:text-lg font-bold text-primary">מה הגוף שלי מבקש ממני להבין?</p>
+                  <div className="p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] bg-gradient-to-br from-primary/20 to-primary/30 border-2 border-primary/40 text-center hover:from-primary/30 hover:to-primary/40 hover:border-primary/50 hover:shadow-lg transition-all duration-500">
+                    <p className="font-display text-base md:text-lg font-bold text-foreground drop-shadow-sm">מה הגוף שלי מבקש ממני להבין?</p>
                   </div>
                 </div>
               </div>
@@ -308,28 +308,28 @@ const PersonalStory = () => {
             </div>
 
             {/* The Final Confirmation */}
-            <div className={`relative p-6 sm:p-8 md:p-12 lg:p-16 xl:p-24 rounded-[2.5rem] md:rounded-[3rem] lg:rounded-[4rem] bg-foreground text-white text-center space-y-6 sm:space-y-8 md:space-y-12 transition-all duration-1000 transform overflow-hidden group hover:scale-[1.02] cursor-default ${isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
+            <div className={`relative p-6 sm:p-8 md:p-12 lg:p-16 xl:p-24 rounded-[2.5rem] md:rounded-[3rem] lg:rounded-[4rem] text-white text-center space-y-6 sm:space-y-8 md:space-y-12 transition-all duration-1000 transform overflow-hidden group hover:scale-[1.02] cursor-default shadow-2xl border-2 border-primary/30 ${isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`} style={{ background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)' }}>
               {/* Animated background gradients */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] group-hover:scale-150 transition-transform duration-1000" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 rounded-full blur-[100px] group-hover:scale-150 transition-transform duration-1000" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/30 rounded-full blur-[100px] group-hover:scale-150 transition-transform duration-1000" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/30 rounded-full blur-[100px] group-hover:scale-150 transition-transform duration-1000" />
               
               <div className="space-y-3 sm:space-y-4 relative z-10">
-                <span className="text-primary font-body text-[9px] sm:text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.5em] group-hover:tracking-[0.4em] md:group-hover:tracking-[0.6em] transition-all duration-500">הניצחון של הרוח</span>
-                <h3 className="font-display text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight group-hover:scale-105 transition-transform duration-500 px-2 sm:px-4">
+                <span className="text-primary font-body text-xs sm:text-sm md:text-base font-extrabold uppercase tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.5em] group-hover:tracking-[0.4em] md:group-hover:tracking-[0.6em] transition-all duration-500 drop-shadow-lg">הניצחון של הרוח</span>
+                <h3 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight group-hover:scale-105 transition-transform duration-500 px-2 sm:px-4 text-primary drop-shadow-2xl">
                   "הכול תקין. אין זכר למה שמתועד בתיק הרפואי."
                 </h3>
               </div>
               
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/60 max-w-2xl mx-auto font-body leading-relaxed italic relative z-10 group-hover:text-white/80 transition-colors duration-500 px-2 sm:px-4">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white max-w-2xl mx-auto font-body leading-relaxed italic relative z-10 px-2 sm:px-4 font-semibold drop-shadow-lg">
                 היום אני כאן, בריאה, חיה ובהודיה עמוקה לגוף שלי. הסיפור שלי אינו הבטחה, הוא עדות לכך שלגוף יש חוכמה עמוקה, וכשהוא מקבל הקשבה ותנאים מיטיבים - <br />
                 ייתכן שינוי משמעותי.
               </p>
 
               <div className="pt-3 sm:pt-4 md:pt-8 relative z-10">
                 <div className="inline-flex flex-col items-center group/heart">
-                  <div className="w-12 sm:w-16 md:w-24 h-px bg-primary/40 mb-3 sm:mb-4 md:mb-6 group-hover/heart:w-16 sm:group-hover/heart:w-24 md:group-hover/heart:w-32 group-hover/heart:bg-primary/60 transition-all duration-700" />
-                  <p className="font-display text-base sm:text-lg md:text-xl lg:text-2xl italic font-medium group-hover/heart:scale-110 transition-transform duration-500">אני כאן בשבילך</p>
-                  <Heart className="w-4 h-4 sm:w-5 sm:h-5 mt-3 sm:mt-4 text-primary/40 fill-primary/20 group-hover/heart:text-primary group-hover/heart:fill-primary/30 group-hover/heart:scale-125 transition-all duration-500" />
+                  <div className="w-12 sm:w-16 md:w-24 h-px bg-primary/60 mb-3 sm:mb-4 md:mb-6 group-hover/heart:w-16 sm:group-hover/heart:w-24 md:group-hover/heart:w-32 group-hover/heart:bg-primary transition-all duration-700 shadow-lg" />
+                  <p className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl italic font-bold group-hover/heart:scale-110 transition-transform duration-500 text-primary drop-shadow-lg">אני כאן בשבילך</p>
+                  <Heart className="w-5 h-5 sm:w-6 sm:h-6 mt-3 sm:mt-4 text-primary fill-primary/30 group-hover/heart:fill-primary/50 group-hover/heart:scale-125 transition-all duration-500 drop-shadow-lg" />
                 </div>
               </div>
             </div>
@@ -337,7 +337,7 @@ const PersonalStory = () => {
             {/* Conclusion CTA */}
             <div className="text-center max-w-2xl mx-auto space-y-8 md:space-y-10">
               <p className="text-lg md:text-2xl text-foreground font-body leading-relaxed group hover:text-foreground/90 transition-colors duration-500 cursor-default">
-                הסיפור האישי שלי כולל מסע מרתק של ריפוי עצמי ממחלה אוטואימונית, תהליך של גילוי חוכמת הגוף והכוח הפנימי לריפוי. חוויותיי האישיות והמקצועיות מאפשרות לי להוביל אתכם/ן במסע הזה בביטחון, הקשבה ותמיכה לאורך כל הדרך.
+                הסיפור האישי שלי כולל מסע מרתק של ריפוי עצמי ממחלה אוטואימונית, תהליך של גילוי חוכמת הגוף והכוח הפנימי לריפוי. חוויותיי האישיות והמקצועיות מאפשרות לי להוביל אותך במסע הזה בביטחון, הקשבה ותמיכה לאורך כל הדרך.
               </p>
               <a 
                 href="#contact"
@@ -353,7 +353,7 @@ const PersonalStory = () => {
                 <div className="absolute inset-0 rounded-full border-2 border-white/40 animate-ping opacity-0 group-hover/cta:opacity-100" />
                 <div className="absolute inset-0 rounded-full border-2 border-white/30 scale-110 animate-ping opacity-0 group-hover/cta:opacity-100" style={{ animationDelay: '0.5s' }} />
                 
-                <span className="relative z-10 group-hover/cta:tracking-wider transition-all duration-300">בואי נדבר</span>
+                <span className="relative z-10 group-hover/cta:tracking-wider transition-all duration-300">נדבר?</span>
                 <Heart className="w-5 h-5 relative z-10 group-hover/cta:scale-110 group-hover/cta:fill-white/30 transition-all duration-400" />
               </a>
             </div>

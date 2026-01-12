@@ -138,13 +138,13 @@ const About = () => {
               >
                 מרחב של <br />
                 <span className="text-gradient-gold italic font-medium inline-block hover:scale-105 transition-transform duration-500 cursor-default">
-                  הקשבה אמיתית
+                  הקשבה וריפוי
                 </span>
               </h2>
 
               <div className="grid md:grid-cols-2 gap-8 md:gap-12 pt-4 md:pt-8">
                 <div className="space-y-4 md:space-y-6">
-                  <p className="text-xl md:text-2xl text-foreground font-body font-light leading-relaxed">
+                  <p className="text-xl md:text-2xl text-foreground font-body font-light leading-relaxed" style={{ letterSpacing: '0.02em' }}>
                     אני אתי אסתר דיין, מובילת התוכנית. אני מגיעה עם ניסיון חיים אישי ומקצועי עשיר ומגוון שמשלב עולמות שונים.
                   </p>
                   <div className="flex items-center gap-3 text-secondary group cursor-default">
@@ -154,14 +154,14 @@ const About = () => {
                 </div>
                 
                 <p className="text-base md:text-lg text-foreground/60 font-body leading-relaxed">
-                  <span className="font-numeric">33</span> שנות חינוך, אמא וסבתא עם הבנה עמוקה של תהליכים משפחתיים, ומסע אישי של ריפוי שהפך לדרך מקצועית של ליווי נשים במסעות שלהן.
+                  <span className="font-numeric">33</span> שנות חינוך, אמא וסבתא עם הבנה עמוקה של תהליכים משפחתיים, ומסע אישי של ריפוי שהפך לדרך מקצועית של ליווי במסעות ריפוי אישיים.
                 </p>
               </div>
             </div>
 
             {/* Detailed Professional Background */}
-            <div className="space-y-6 p-8 md:p-10 rounded-[2rem] md:rounded-[3rem] bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/30">
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">
+            <div className="space-y-6 p-8 md:p-10 rounded-[2rem] md:rounded-[3rem] bg-gradient-to-br from-white/70 via-primary/15 to-secondary/15 backdrop-blur-sm border-2 border-primary/20">
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground/95 mb-6 drop-shadow-sm">
                 הניסיון והמומחיות שלי
               </h3>
               <div className="grid md:grid-cols-2 gap-4 md:gap-6">
@@ -175,12 +175,12 @@ const About = () => {
                   { title: 'מטפלת במודל היזכרות', detail: 'טיפול הילינג בשילוב ניגון בקערת קריסטל' }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 group">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 group-hover:scale-150 transition-transform" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 group-hover:scale-150 transition-transform shadow-sm" />
                     <div>
-                      <h4 className="font-body text-base md:text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                      <h4 className="font-body text-base md:text-lg font-bold text-foreground/95 group-hover:text-primary transition-colors">
                         {item.title}
                       </h4>
-                      <p className="text-sm md:text-base text-foreground/60 font-body">
+                      <p className="text-sm md:text-base text-foreground/75 font-body font-medium">
                         {item.hasNumber ? (
                           <>
                             כ־<span className="font-numeric">33</span> שנים של עבודה עם אנשים
@@ -196,7 +196,7 @@ const About = () => {
             {/* Professional Background Section */}
             <div 
               ref={cardsRef as React.RefObject<HTMLDivElement>}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3"
             >
               {[
                 { label: 'תרפיה באומנות', desc: 'עבודה עם רגשות', icon: Sparkles },
@@ -206,16 +206,16 @@ const About = () => {
               ].map((item, i) => (
                 <div 
                   key={i} 
-                  className={`group p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] bg-white border border-primary/10 hover:border-primary/40 hover:shadow-card transition-all duration-700 hover:-translate-y-4 hover:rotate-1 cursor-default text-center ${cardsVisible[i] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+                  className={`group p-3 md:p-3 rounded-lg bg-white/90 backdrop-blur-sm border border-primary/20 hover:border-primary/40 hover:shadow-md transition-all duration-700 hover:-translate-y-1 hover:rotate-1 cursor-default text-center ${cardsVisible[i] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
                   style={{ transitionDelay: `${i * 150}ms` }}
                 >
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-primary/5 flex items-center justify-center mb-4 md:mb-6 mx-auto group-hover:bg-primary group-hover:text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                    <item.icon className="w-5 h-5 md:w-6 md:h-6 group-hover:animate-pulse" />
+                  <div className="w-8 h-8 md:w-9 md:h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-2 mx-auto group-hover:bg-primary group-hover:text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                    <item.icon className="w-4 h-4 md:w-5 md:h-5 group-hover:animate-pulse" />
                   </div>
-                  <h4 className="font-display text-lg md:text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors duration-500">
+                  <h4 className="font-display text-base md:text-lg font-bold text-foreground/95 mb-1 group-hover:text-primary transition-colors duration-500 drop-shadow-sm">
                     {item.label}
                   </h4>
-                  <p className="font-body text-[10px] text-foreground/40 font-bold uppercase tracking-widest group-hover:text-foreground/60 transition-colors duration-500">
+                  <p className="font-body text-[10px] md:text-[11px] text-foreground/70 font-bold uppercase tracking-widest group-hover:text-foreground/90 transition-colors duration-500">
                     {item.label === 'הילינג' ? (
                       <>
                         עץ החיים <br />
@@ -225,7 +225,7 @@ const About = () => {
                   </p>
                   
                   {/* Decorative corner on hover */}
-                  <div className="absolute top-4 right-4 w-0 h-0 border-t-2 border-r-2 border-primary/0 group-hover:w-6 group-hover:h-6 group-hover:border-primary/40 transition-all duration-500" />
+                  <div className="absolute top-1.5 right-1.5 w-0 h-0 border-t border-r border-primary/0 group-hover:w-2.5 group-hover:h-2.5 group-hover:border-primary/40 transition-all duration-500" />
                 </div>
               ))}
             </div>
@@ -236,7 +236,7 @@ const About = () => {
               <div className="absolute bottom-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-secondary/20 rounded-full blur-[60px] md:blur-[80px] group-hover:scale-150 transition-transform duration-1000" />
               <Quote className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-primary/20 absolute -bottom-2 md:-bottom-4 -left-2 md:-left-4 group-hover:text-primary/30 group-hover:scale-110 transition-all duration-700" />
               <p className="font-display text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl italic leading-relaxed relative z-10 text-white/90 group-hover:text-white transition-colors duration-500 px-2 sm:px-4 md:px-6 text-center">
-                "הגוף יודע לרפא את עצמו, הוא רק צריך שנפסיק להילחם בו ונתחיל להקשיב לו"
+                "הגוף יודע לרפא את עצמו, <br /> הוא רק צריך שנפסיק להילחם בו ונתחיל להקשיב לו"
               </p>
               
               {/* Animated gradient line */}

@@ -10,18 +10,18 @@ import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 const faqs = [
   {
     question: 'למי מתאימה התוכנית הקבוצתית?',
-    answer: 'לכל אדם המתמודד עם מחלה אוטואימונית או מרגיש שזה הזמן לעצור, להקשיב ולבחור בדרך אחרת. אם משהו בפנים אומר "אני צריך זמן לעצמי" או "אני רוצה להבין מה באמת קורה בי" – זה המקום. התוכנית מתאימה למי שמחפש תהליך עמוק ומתמשך במרחב בטוח ותומך.',
+    answer: 'לכל אדם המתמודד עם מחלה אוטואימונית, או למי שהגיע הזמן לעצור, להקשיב ולבחור בדרך אחרת. אם משהו בפנים אומר "עכשיו הזמן לעצמי" או "רוצה להבין מה באמת קורה בי" – זה המקום. התוכנית מתאימה למי שרוצה תהליך עמוק ומתמשך במרחב בטוח ותומך.',
   },
   {
     question: 'מה ההבדל בין טיפול אישי לתוכנית הקבוצתית?',
-    answer: 'בטיפול אישי זה רק את ואני, בקצב שלך ובמרחב פרטי לגמרי. בתוכנית הקבוצתית יש את הכוח של המעגל – ההקשבה, השיתוף, וההבנה שאת לא לבד. הקבוצה מציעה תהליך מובנה של 10 חודשים עם מפגשים שבועיים, כלים נלמדים, וליווי מקצועי מתמשך. שני המסעות יפים, והבחירה תלויה במה שאת צריכה עכשיו.',
+    answer: 'בטיפול אישי זה מרחב פרטי לגמרי, בקצב אישי. בתוכנית הקבוצתית יש את הכוח של המעגל – ההקשבה, השיתוף, וההבנה שלא לבד במסע. הקבוצה מציעה תהליך מובנה של 10 חודשים עם מפגשים שבועיים, כלים נלמדים, וליווי מקצועי מתמשך. שני המסעות יפים, והבחירה תלויה במה שמתאים עכשיו.',
   },
   {
     question: 'כמה עולה התוכנית?',
-    answer: 'מחיר התוכנית משתנה בהתאם למספר המשתתפים והמשתתפות ולפרטים הספציפיים. בשיחת היכרות אישית נדבר על כל הפרטים, כולל אפשרויות תשלום והתאמה אישית. חשוב לי שכל אדם שמרגיש שזה המקום המתאים יוכל למצוא את הדרך להצטרף.',
+    answer: 'מחיר התוכנית משתנה בהתאם למספר המשתתפים והמשתתפות ולפרטים הספציפיים. בשיחת היכרות אישית נדבר על כל הפרטים, כולל אפשרויות תשלום והתאמה אישית. חשוב לי שכל מי שהמקום הזה מרגיש נכון, יוכל למצוא את הדרך להצטרף.',
   },
   {
-    question: 'מה קורה אם אני צריכה להחסיר מפגש?',
+    question: 'מה קורה במקרה של היעדרות ממפגש?',
     answer: 'אני מבינה שהחיים קורים. התוכנית בנויה על מחויבות, אבל גם על גמישות והבנה. במקרים של היעדרות, נמצא דרך לעדכן ולשמור על ההמשכיות בתהליך. חשוב לי שכל משתתף ומשתתפת ירגישו שיש להם מקום ותמיכה, גם כשהחיים מאתגרים.',
   },
   {
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: 'האם צריך ניסיון קודם?',
-    answer: 'בכלל לא. לא צריך שום ניסיון, לא צריך להכין כלום, לא צריך להיות "מוכנה". רק להגיע עם הנכונות להקשיב לעצמך ולהיות חלק מתהליך קבוצתי. השאר יגיע בזמן שלו, במהלך 10 החודשים של המסע המשותף.',
+    answer: 'בכלל לא. לא צריך שום ניסיון, לא צריך להכין כלום, לא צריך הכנה מיוחדת. רק להגיע עם הנכונות להקשיב לעצמך ולהיות חלק מתהליך קבוצתי. השאר יגיע בזמן שלו, במהלך 10 החודשים של המסע המשותף.',
   },
   {
     question: 'מתי מתחילה התוכנית הבאה?',
@@ -75,12 +75,12 @@ const FAQ = () => {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="bg-white border border-secondary/10 rounded-[1.5rem] md:rounded-[2rem] px-6 md:px-8 py-1 md:py-2 overflow-hidden transition-all duration-500 data-[state=open]:shadow-2xl data-[state=open]:border-secondary/30 data-[state=open]:scale-[1.02] hover:border-secondary/20 hover:shadow-card relative group/item"
+                  className="bg-white/90 backdrop-blur-sm border-2 border-secondary/20 rounded-[1.5rem] md:rounded-[2rem] px-6 md:px-8 py-1 md:py-2 overflow-hidden transition-all duration-500 data-[state=open]:shadow-2xl data-[state=open]:border-secondary/40 data-[state=open]:scale-[1.02] hover:border-secondary/30 hover:shadow-card relative group/item"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-secondary/0 to-secondary/0 data-[state=open]:from-secondary/5 data-[state=open]:to-transparent transition-all duration-700 pointer-events-none" />
                   <AccordionTrigger className="hover:no-underline group relative z-10">
                     <div className="flex items-center justify-between w-full text-right gap-4 md:gap-6">
-                      <span className="font-display text-lg md:text-2xl font-bold text-foreground group-hover:text-secondary transition-all duration-500 leading-tight">
+                      <span className="font-display text-lg md:text-2xl font-bold text-foreground/95 group-hover:text-secondary transition-all duration-500 leading-tight drop-shadow-sm">
                         {faq.question}
                       </span>
                       <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-secondary/20 flex items-center justify-center shrink-0 group-data-[state=open]:rotate-45 group-data-[state=open]:bg-secondary group-data-[state=open]:border-secondary transition-all duration-500 group-hover:scale-110 group-hover:border-secondary/40">
@@ -88,7 +88,7 @@ const FAQ = () => {
                       </div>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="pt-2 md:pt-4 pb-6 md:pb-8 text-muted-foreground text-base md:text-lg leading-relaxed font-body relative z-10">
+                  <AccordionContent className="pt-2 md:pt-4 pb-6 md:pb-8 text-foreground/80 text-base md:text-lg leading-relaxed font-body relative z-10">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -97,9 +97,9 @@ const FAQ = () => {
           </div>
 
           {/* Still Have Questions? */}
-          <div className="mt-16 md:mt-20 flex flex-col items-center gap-6 md:gap-8 p-8 md:p-12 bg-white rounded-[2.5rem] md:rounded-[3rem] shadow-xl border border-secondary/10 text-center hover:shadow-2xl hover:scale-[1.02] hover:border-secondary/20 transition-all duration-700 group relative overflow-hidden">
+          <div className="mt-16 md:mt-20 flex flex-col items-center gap-6 md:gap-8 p-8 md:p-12 bg-white/90 backdrop-blur-sm rounded-[2.5rem] md:rounded-[3rem] shadow-xl border-2 border-secondary/25 text-center hover:shadow-2xl hover:scale-[1.02] hover:border-secondary/35 transition-all duration-700 group relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-secondary/0 to-secondary/0 group-hover:from-secondary/5 group-hover:to-transparent transition-all duration-1000" />
-            <p className="font-display text-xl md:text-2xl text-foreground font-bold group-hover:text-secondary transition-colors duration-500 relative z-10">יש לך שאלה שלא מופיעה כאן?</p>
+            <p className="font-display text-xl md:text-2xl text-foreground/95 font-bold group-hover:text-secondary transition-colors duration-500 relative z-10 drop-shadow-sm">יש לך שאלה שלא מופיעה כאן?</p>
             <a
               href="https://wa.me/972526172932"
               target="_blank"
@@ -107,7 +107,7 @@ const FAQ = () => {
               className="btn-gold flex items-center justify-center gap-4 px-10 py-4 md:px-12 md:py-5 text-base md:text-lg group/btn w-full sm:w-auto relative z-10 hover:scale-110 transition-all duration-500 ripple-effect"
             >
               <MessageCircle className="w-5 h-5 group-hover/btn:rotate-12 transition-transform duration-500" />
-              <span className="group-hover/btn:tracking-wider transition-all duration-300">שאלי אותי בוואטסאפ</span>
+              <span className="group-hover/btn:tracking-wider transition-all duration-300">יצירת קשר בוואטסאפ</span>
               <div className="w-6 md:w-8 h-[1px] bg-white/50 group-hover/btn:w-12 transition-all duration-500" />
             </a>
           </div>

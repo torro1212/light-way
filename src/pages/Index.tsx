@@ -21,8 +21,8 @@ const Index = () => {
         <Preloader />
         <Header />
         <Hero />
-        <About />
         <PersonalStory />
+        <About />
         <Services />
         <Differentiation />
         <Testimonials />

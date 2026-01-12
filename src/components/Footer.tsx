@@ -17,7 +17,7 @@ const Footer = () => {
               <div className="flex flex-col items-center gap-3">
                 <div className="relative">
                   <div className="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover/logo:opacity-100 transition-all duration-700 scale-150" />
-                  <img src={logo} alt="דרך האור" className="h-24 md:h-28 w-24 md:w-28 object-contain group-hover/logo:scale-110 group-hover/logo:rotate-12 transition-all duration-700 relative z-10" />
+                  <img src={logo} alt="דרך האור" className="h-32 md:h-36 lg:h-40 w-32 md:w-36 lg:w-40 object-contain group-hover/logo:scale-110 group-hover/logo:rotate-12 transition-all duration-700 relative z-10 animate-float-slow" />
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="font-body text-[8px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-primary font-bold group-hover/logo:tracking-[0.5em] transition-all duration-500">דרך האור</span>
@@ -25,12 +25,13 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex flex-col items-center md:items-start md:border-r md:border-white/10 md:pr-4">
-                <span className="font-display text-2xl md:text-3xl font-bold text-white tracking-tight group-hover/logo:text-secondary transition-colors duration-500">אתי אסתר דיין</span>
+                <span className="font-display text-2xl md:text-3xl font-bold text-white group-hover/logo:text-secondary transition-colors duration-500" style={{ letterSpacing: '0.05em' }}>אתי אסתר דיין</span>
               </div>
             </a>
-            <p className="text-white/60 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed max-w-md font-body mx-auto md:mx-0 hover:text-white/80 transition-colors duration-500 px-2 sm:px-4 md:px-0 text-center md:text-right">
+            <p className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed max-w-md font-body font-normal mx-auto md:mx-0 hover:text-white/95 transition-colors duration-500 px-2 sm:px-4 md:px-0 text-center md:text-right">
               מסע ריפוי אישי וקבוצתי <br />
-              למתמודדים עם מחלות אוטואימוניות. מרחב בטוח של הקשבה, ליווי והתחברות פנימית.
+              למתמודדים עם מחלה אוטואימונית. <br />
+              מרחב בטוח של הקשבה, ליווי והתחברות פנימית.
             </p>
             <div className="flex justify-center md:justify-start gap-4">
               {[
@@ -92,7 +93,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-16 md:mt-24 pt-8 md:pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 md:gap-8 text-center px-2 sm:px-4">
-          <div className="flex flex-wrap items-center justify-center gap-2 text-[0.65rem] sm:text-xs md:text-sm text-white/30 font-body">
+          <div className="flex flex-wrap items-center justify-center gap-2 text-[0.65rem] sm:text-xs md:text-sm text-white/30 font-body" style={{ letterSpacing: '0.02em' }}>
             <span>נבנה בדיוק והקשבה</span>
             <Heart className="w-3 h-3 md:w-4 md:h-4 text-secondary fill-secondary animate-pulse flex-shrink-0" />
             <span>עבור אתי אסתר דיין</span>

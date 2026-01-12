@@ -52,7 +52,7 @@ const Header = () => {
                 <img 
                   src={logo} 
                   alt="דרך האור" 
-                  className="h-16 sm:h-20 md:h-24 lg:h-28 w-16 sm:w-20 md:w-24 lg:w-28 object-contain relative z-10 transition-all duration-500 group-hover:rotate-[10deg] group-hover:scale-110"
+                  className="h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 w-20 sm:w-24 md:w-28 lg:w-32 xl:w-36 object-contain relative z-10 transition-all duration-500 group-hover:rotate-[10deg] group-hover:scale-110 animate-float-slow"
                 />
               </div>
               <span className={`font-body text-[0.5rem] sm:text-xs md:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] font-bold transition-colors duration-500 whitespace-nowrap ${
@@ -62,9 +62,9 @@ const Header = () => {
               </span>
             </div>
             <div className="hidden sm:flex flex-col border-r border-white/20 pr-3 md:pr-5 transition-all duration-500 group-hover:border-secondary/40">
-              <span className={`font-display text-lg sm:text-xl md:text-2xl font-bold tracking-tight transition-colors duration-500 ${
+              <span className={`font-display text-lg sm:text-xl md:text-2xl font-bold transition-colors duration-500 ${
                 isScrolled ? 'text-foreground' : 'text-white'
-              }`}>
+              }`} style={{ letterSpacing: '0.05em' }}>
                 אתי אסתר דיין
               </span>
             </div>
@@ -88,7 +88,9 @@ const Header = () => {
             </div>
             
             <a
-              href="tel:052-617-2932"
+              href="https://wa.me/972526172932"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`group flex items-center gap-4 px-8 py-3.5 rounded-full font-bold text-xs tracking-widest transition-all duration-500 ${
                 isScrolled 
                   ? 'bg-primary text-white shadow-soft hover:shadow-xl hover:-translate-y-1' 
@@ -139,7 +141,9 @@ const Header = () => {
             <div className="mt-auto space-y-6 pb-12">
               <p className="text-muted-foreground text-center font-body text-sm">זמינה עבורך לכל שאלה</p>
               <a
-                href="tel:052-617-2932"
+                href="https://wa.me/972526172932"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-gold flex items-center justify-center gap-4 w-full py-6 text-xl rounded-[2rem]"
               >
                 <Phone className="w-6 h-6" />

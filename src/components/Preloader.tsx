@@ -10,10 +10,10 @@ const Preloader = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   
   const phrases = [
-    'מתחברת אליך...',
-    'יוצרת מרחב בטוח...',
-    'מזמינה אותך פנימה...',
-    'מוכנה לקבל אותך ❤️'
+    'מתחבר אליך...',
+    'יוצר מרחב בטוח...',
+    'מזמין אותך פנימה...',
+    'מוכן לקבל אותך ❤️'
   ];
 
   useEffect(() => {
@@ -142,7 +142,7 @@ const Preloader = () => {
 
         {/* Animated Text */}
         <div className="text-center space-y-6 mb-10">
-          <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground tracking-tight animate-reveal-text relative">
+          <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground animate-reveal-text relative" style={{ letterSpacing: '0.05em' }}>
             אתי אסתר דיין
             {/* Animated underline */}
             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full animate-[width_2s_ease-out_forwards]" style={{ width: '0%', maxWidth: '200px' }} />
