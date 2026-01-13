@@ -102,6 +102,13 @@ const Footer = () => {
             © {new Date().getFullYear()} ETTI ESTER DAYAN. ALL RIGHTS RESERVED.
           </p>
         </div>
+
+        {/* Disclaimer */}
+        <div className="mt-6 md:mt-8 text-center">
+          <p className="text-white/30 text-[10px] sm:text-xs md:text-sm font-body italic">
+            נשמרת הזכות לערוך שינויים בתכנית ט.ל.ח.
+          </p>
+        </div>
       </div>
     </footer>
   );

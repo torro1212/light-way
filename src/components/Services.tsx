@@ -1,7 +1,6 @@
 import { Calendar, Users, Clock, Sparkles, Stars, Wind, Flower2, Heart, CheckCircle2 } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { useScrollReveal } from '@/hooks/use-scroll-reveal';
-import servicesBackground from '@/assets/services.jpg';
 import backImage from '@/assets/Back.png';
 
 const Services = () => {
@@ -26,6 +25,7 @@ const Services = () => {
   const programDetails = [
     { icon: Calendar, label: 'מפגש שבועי', detail: 'פעם בשבוע' },
     { icon: Clock, label: '18:00-21:00', detail: '3 שעות' },
+    { icon: Sparkles, label: 'מרחב של הקשבה וריפוי', detail: 'מסע עמוק ומרפא' },
     { icon: Users, label: 'עד 10 משתתפים ומשתתפות', detail: 'קבוצה קטנה ומחוייבת' },
     { icon: Heart, label: '10 חודשים', detail: 'מסע מלא' }
   ];
@@ -66,21 +66,6 @@ const Services = () => {
 
   return (
     <section id="services" className="section-padding relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, #faf9f5, #f0f0e8, #e8e8e0)' }}>
-      {/* Artistic Background Image Placement */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-        {/* Floating Image left side */}
-        <div className="absolute top-10 -left-5 md:top-20 md:-left-10 w-[50%] md:w-[45%] opacity-[0.15] md:opacity-[0.2] -rotate-6 transition-transform duration-1000 hover:rotate-0">
-           <img 
-            src={servicesBackground} 
-            alt="" 
-            className="w-full h-auto object-contain rounded-[4rem] shadow-2xl"
-            style={{
-              maskImage: 'linear-gradient(to right, black 50%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to right, black 50%, transparent 100%)'
-            }}
-          />
-        </div>
-      </div>
       
       {/* Modern Background Texture */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
@@ -145,12 +130,12 @@ const Services = () => {
           className="text-center mb-16 md:mb-32 max-w-5xl mx-auto"
         >
           <div className={`transition-all duration-1000 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-            <div className="flex items-center justify-center gap-4 md:gap-6 mb-6 md:mb-8 group">
-              <div className="w-12 md:w-16 h-1 bg-primary/80 group-hover:w-20 md:group-hover:w-24 transition-all duration-700 shadow-sm" />
-              <span className="text-foreground bg-primary/20 px-4 py-2 rounded-full font-body text-[10px] md:text-sm font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] border-2 border-primary/30">
+            <div className="flex items-center justify-center gap-2 sm:gap-4 md:gap-6 mb-6 md:mb-8 group px-4">
+              <div className="w-8 sm:w-12 md:w-16 h-1 bg-primary/80 group-hover:w-12 sm:group-hover:w-20 md:group-hover:w-24 transition-all duration-700 shadow-sm" />
+              <span className="text-foreground bg-primary/20 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-body text-[9px] sm:text-[10px] md:text-sm font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.5em] border-2 border-primary/30 whitespace-nowrap">
                 התוכנית הקבוצתית
               </span>
-              <div className="w-12 md:w-16 h-1 bg-primary/80 group-hover:w-20 md:group-hover:w-24 transition-all duration-700 shadow-sm" />
+              <div className="w-8 sm:w-12 md:w-16 h-1 bg-primary/80 group-hover:w-12 sm:group-hover:w-20 md:group-hover:w-24 transition-all duration-700 shadow-sm" />
             </div>
             
             <h2 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] mb-4 sm:mb-6 md:mb-8 px-4 text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)]">
@@ -161,11 +146,9 @@ const Services = () => {
               מסע ריפוי אישי וקבוצתי למתמודדים עם מחלה אוטואימונית
             </p>
 
-            <div className="inline-block bg-white/70 backdrop-blur-md px-6 py-3 rounded-2xl border-2 border-primary/30 shadow-md mb-4">
-              <p className="text-xl md:text-3xl text-foreground font-body font-medium leading-relaxed">
-                לגלות את החוכמה הפנימית של הגוף
-              </p>
-            </div>
+            <p className="font-display text-xl md:text-3xl lg:text-4xl text-gradient-gold italic font-medium mb-4 drop-shadow-md">
+              לגלות את החוכמה הפנימית של הגוף
+            </p>
             
             <p className="text-lg md:text-xl text-foreground/80 font-body font-medium bg-white/50 inline-block px-5 py-2 rounded-xl" style={{ letterSpacing: '0.02em' }}>
               עם אתי אסתר דיין
@@ -187,20 +170,60 @@ const Services = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              {programDetails.map((item, i) => (
-                <div key={i} className="text-center group cursor-default">
-                  <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-500">
-                    <item.icon className="w-8 h-8 md:w-10 md:h-10 text-primary group-hover:text-white transition-colors" />
+            <div className="max-w-4xl mx-auto px-4">
+              {/* Top row - 2 boxes */}
+              <div className="grid grid-cols-2 gap-4 sm:gap-8 md:gap-12 mb-8 md:mb-12 max-w-2xl mx-auto">
+                {[programDetails[0], programDetails[1]].map((item, i) => (
+                  <div key={i} className="text-center group cursor-default">
+                    <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 md:mb-4 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-500">
+                      <item.icon className="w-7 h-7 md:w-10 md:h-10 text-primary group-hover:text-white transition-colors" />
+                    </div>
+                    <h4 className="font-display text-sm sm:text-base md:text-lg lg:text-xl font-bold text-foreground mb-1 font-numeric px-1">
+                      {item.label}
+                    </h4>
+                    <p className="text-xs sm:text-sm md:text-base text-foreground/60 font-body px-1">
+                      {item.detail}
+                    </p>
                   </div>
-                  <h4 className="font-display text-lg md:text-xl font-bold text-foreground mb-1 font-numeric">
-                    {item.label}
-                  </h4>
-                  <p className="text-sm md:text-base text-foreground/60 font-body">
-                    {item.detail}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
+              
+              {/* Center box - highlighted */}
+              <div className="flex justify-center mb-8 md:mb-12 px-4">
+                {(() => {
+                  const CenterIcon = programDetails[2].icon;
+                  return (
+                    <div className="text-center group cursor-default max-w-xs sm:max-w-none">
+                      <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center group-hover:from-primary group-hover:to-primary/90 group-hover:scale-110 transition-all duration-500 border-2 border-primary/30">
+                        <CenterIcon className="w-10 h-10 md:w-12 md:h-12 text-primary group-hover:text-white transition-colors" />
+                      </div>
+                      <h4 className="font-display text-base sm:text-lg md:text-xl font-bold text-primary mb-1 px-2">
+                        {programDetails[2].label}
+                      </h4>
+                      <p className="text-xs sm:text-sm md:text-base text-foreground/70 font-body font-medium px-2">
+                        {programDetails[2].detail}
+                      </p>
+                    </div>
+                  );
+                })()}
+              </div>
+              
+              {/* Bottom row - 2 boxes */}
+              <div className="grid grid-cols-2 gap-4 sm:gap-8 md:gap-12 max-w-2xl mx-auto">
+                {[programDetails[3], programDetails[4]].map((item, i) => (
+                  <div key={i + 3} className="text-center group cursor-default">
+                    <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 md:mb-4 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-500">
+                      <item.icon className="w-7 h-7 md:w-10 md:h-10 text-primary group-hover:text-white transition-colors" />
+                    </div>
+                    <h4 className="font-display text-sm sm:text-base md:text-lg lg:text-xl font-bold text-foreground mb-1 font-numeric px-1">
+                      {item.label}
+                    </h4>
+                    <p className="text-xs sm:text-sm md:text-base text-foreground/60 font-body px-1">
+                      {item.detail}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

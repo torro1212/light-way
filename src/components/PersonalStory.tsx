@@ -1,14 +1,14 @@
 import { Heart, Sparkles, ScrollText, Sunrise, Stars, Wind, Flower2 } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
-import { useScrollReveal, useStaggeredReveal } from '@/hooks/use-scroll-reveal';
-import personalStoryBg1 from '@/assets/personal story.jpg';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
+import personalStoryBg1 from '@/assets/5.JPG';
 import personalStoryBg2 from '@/assets/Personal Story.png';
+import treeHeaderImage from '@/assets/5.JPG';
 
 const PersonalStory = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
-  const { ref: cardsRef, visibleItems: cardsVisible } = useStaggeredReveal(4, 100);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   const backgrounds = [personalStoryBg1, personalStoryBg2];
@@ -43,34 +43,6 @@ const PersonalStory = () => {
       className="py-32 md:py-48 relative overflow-hidden"
       style={{ background: 'linear-gradient(to bottom, #e8e8e0, #f0f0e8, #faf9f5)' }}
     >
-      {/* Artistic Photo Collage Background */}
-      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-        {/* Image 1 - Top Right - Polaroid Style */}
-        <div 
-          className="absolute top-5 -right-5 md:top-10 md:right-10 w-[40%] md:w-[35%] opacity-[0.2] md:opacity-[0.25] rotate-6 transition-all duration-1000 hover:rotate-3 hover:scale-105"
-        >
-          <div className="bg-white p-2 md:p-4 shadow-xl rounded-lg md:rounded-xl rotate-2">
-            <img 
-              src={backgrounds[0]} 
-              alt="" 
-              className="w-full h-auto object-contain rounded-md md:rounded-lg"
-            />
-          </div>
-        </div>
-        
-        {/* Image 2 - Bottom Left - Polaroid Style */}
-        <div 
-          className="absolute bottom-10 -left-5 md:bottom-20 md:left-10 w-[40%] md:w-[35%] opacity-[0.2] md:opacity-[0.25] -rotate-3 transition-all duration-1000 hover:-rotate-1 hover:scale-105"
-        >
-          <div className="bg-white p-2 md:p-4 shadow-xl rounded-lg md:rounded-xl -rotate-2">
-            <img 
-              src={backgrounds[1]} 
-              alt="" 
-              className="w-full h-auto object-contain rounded-md md:rounded-lg"
-            />
-          </div>
-        </div>
-      </div>
       
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
@@ -137,21 +109,36 @@ const PersonalStory = () => {
           {/* Section Header */}
           <div 
             ref={headerRef as React.RefObject<HTMLDivElement>}
-            className="text-center mb-16 md:mb-24 space-y-6"
+            className="text-center mb-16 md:mb-24 space-y-6 relative py-16 md:py-24 px-4 rounded-[3rem] overflow-hidden shadow-2xl"
           >
-            <div className={`inline-flex items-center gap-4 px-6 py-2 rounded-full bg-primary/5 border border-primary/10 hover:bg-primary/10 hover:border-primary/20 hover:scale-105 transition-all duration-500 group cursor-default ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-              <ScrollText className="w-4 h-4 text-primary group-hover:rotate-12 transition-transform duration-500" />
-              <span className="text-primary font-body text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] group-hover:tracking-[0.5em] transition-all duration-500">
-                הסיפור שלי
-              </span>
-              <Stars className="w-3 h-3 text-primary/40 group-hover:text-primary group-hover:rotate-180 transition-all duration-700" />
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+              <img 
+                src={treeHeaderImage} 
+                alt="" 
+                className="w-full h-full object-cover opacity-90 brightness-110"
+              />
+              {/* Gradient overlays for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#faf9f5]/95 via-[#faf9f5]/70 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#e8e8e0]/50 via-transparent to-[#faf9f5]/95" />
             </div>
-            <h2 className={`font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] tracking-tighter transition-all duration-1000 delay-300 px-4 text-center ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              למה יצרתי את <br />
-              <span className="text-primary italic font-medium inline-block hover:scale-105 transition-transform duration-500 cursor-default">
-                דרך האור
-              </span>
-            </h2>
+
+            {/* Content */}
+            <div className="relative z-10 space-y-6">
+              <div className={`inline-flex items-center gap-4 px-6 py-2 rounded-full bg-white/80 backdrop-blur-md border-2 border-white/90 shadow-lg hover:bg-white/95 hover:scale-105 transition-all duration-500 group cursor-default ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+                <ScrollText className="w-4 h-4 text-primary group-hover:rotate-12 transition-transform duration-500 drop-shadow-sm" />
+                <span className="text-foreground font-body text-[10px] md:text-xs font-extrabold uppercase tracking-[0.3em] md:tracking-[0.4em] group-hover:tracking-[0.5em] transition-all duration-500 drop-shadow-sm">
+                  הסיפור שלי
+                </span>
+                <Stars className="w-3 h-3 text-primary group-hover:text-primary group-hover:rotate-180 transition-all duration-700 drop-shadow-sm" />
+              </div>
+              <h2 className={`font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground leading-[1.1] tracking-tighter transition-all duration-1000 delay-300 px-4 text-center drop-shadow-2xl ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                למה יצרתי את <br />
+                <span className="text-primary italic font-black inline-block hover:scale-105 transition-transform duration-500 cursor-default mt-2 drop-shadow-2xl">
+                  דרך האור
+                </span>
+              </h2>
+            </div>
           </div>
 
           {/* Story Chapters */}
@@ -193,7 +180,7 @@ const PersonalStory = () => {
                 </div>
                 <div className="space-y-4">
             <p className="text-xl md:text-2xl lg:text-3xl font-display italic font-bold text-primary drop-shadow-lg leading-relaxed">
-              "לפני <span className="font-numeric">27</span> שנים אובחנתי כחולה במחלה אוטואימונית קשה."
+              "לפני <span className="font-numeric text-3xl md:text-4xl lg:text-5xl bg-gradient-to-br from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent">27</span> שנים אובחנתי כחולה במחלה אוטואימונית קשה."
             </p>
                   <div className="h-px bg-primary/60 w-16 md:w-24 shadow-lg" />
                   <p className="text-base md:text-lg lg:text-xl text-white font-body leading-relaxed font-semibold drop-shadow-md">
@@ -212,26 +199,6 @@ const PersonalStory = () => {
                 <p className="text-base md:text-lg text-foreground/60 font-body leading-relaxed">
                   מאותו רגע התחילו שנים של סבל: כאבים, אשפוזים, תרופות מדכאות חיסון, סטרואידים, תרופות ביולוגיות. שנים של פחדים והרבה מאוד סמכות חיצונית שאמרה לי מה הגוף שלי לא יכול.
                 </p>
-              </div>
-
-              <div 
-                ref={cardsRef as React.RefObject<HTMLDivElement>}
-                className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
-              >
-                {[
-                  'אמא',
-                  'לידה שקטה',
-                  'אשפוזים ופחד',
-                  'סמכות חיצונית'
-                ].map((item, i) => (
-                  <div 
-                    key={i} 
-                    className={`p-4 md:p-6 rounded-2xl md:rounded-3xl bg-gradient-to-br from-primary/15 to-primary/25 border-2 border-primary/30 text-center shadow-md hover:shadow-card hover:border-primary/40 hover:-translate-y-2 hover:scale-105 transition-all duration-500 cursor-default group ${cardsVisible[i] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                    style={{ transitionDelay: `${i * 100}ms` }}
-                  >
-                    <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-foreground/80 group-hover:text-foreground group-hover:tracking-[0.2em] transition-all duration-500">{item}</span>
-                  </div>
-                ))}
               </div>
             </div>
 

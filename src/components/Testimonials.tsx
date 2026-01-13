@@ -1,6 +1,7 @@
 import { Star, Quote, MessageSquare, Sparkles, Heart, Wind, Flower2 } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 import { useState, useEffect } from 'react';
+import personalStoryImage from '@/assets/personal story.jpg';
 
 const testimonials = [
   {
@@ -29,7 +30,7 @@ const testimonials = [
   },
   {
     text: 'אין מילים שיכולות לתאר את הרוגע והשלווה שנכנסו לחיי מהיום בו אתי נכנסה לחיי. זכיתי בה! כמו מלאך שמלווה אותי. כמה כח היא הכניסה לחיי...',
-    author: 'אלה ס.',
+    author: 'אלי ס.',
     rating: 5,
     role: 'משתתפת במסע',
   },
@@ -41,9 +42,9 @@ const testimonials = [
   },
   {
     text: 'המקום של אתי הוא אי של שקט בתוך המרוץ של החיים. הדיוק שלה והרגישות לפרטים הקטנים הופכים כל מפגש למסע אמיתי.',
-    author: 'יעל א.',
+    author: 'שלמה כ.',
     rating: 5,
-    role: 'משתתפת במעגלים',
+    role: 'משתתף במעגלים',
   },
 ];
 
@@ -123,7 +124,7 @@ const Testimonials = () => {
             <div className="flex items-center gap-4 mb-6 group">
               <MessageSquare className="w-5 h-5 text-primary group-hover:scale-110 group-hover:rotate-12 transition-all duration-500" />
               <span className="text-primary font-body text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] group-hover:tracking-[0.5em] transition-all duration-500">
-                נשים מספרות
+                המשתתפים מספרים
               </span>
               <Sparkles className="w-4 h-4 text-primary/40 group-hover:text-primary group-hover:rotate-180 transition-all duration-700" />
             </div>
@@ -215,27 +216,38 @@ const Testimonials = () => {
         </div>
 
         {/* CTA to WhatsApp */}
-        <div className="mt-20 md:mt-32 text-center">
+        <div className="mt-20 md:mt-32 text-center px-4">
           <a
             href="https://wa.me/972526172932"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex flex-col items-center justify-center gap-3 md:gap-4 py-6 md:py-8 px-8 md:px-12 bg-primary rounded-[3rem] text-white overflow-hidden relative shadow-2xl hover:scale-110 transition-all duration-700 w-full sm:w-auto cursor-pointer hover:shadow-[0_30px_80px_rgba(var(--primary),0.4)]"
+            className="group inline-flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-4 py-5 sm:py-6 md:py-8 px-6 sm:px-8 md:px-12 bg-primary rounded-[3rem] text-white overflow-hidden relative shadow-2xl hover:scale-110 transition-all duration-700 w-full sm:w-auto cursor-pointer hover:shadow-[0_30px_80px_rgba(var(--primary),0.4)] max-w-md sm:max-w-none mx-auto"
             style={{
               transform: `perspective(1000px) rotateX(${mousePos.y * -0.03}deg) rotateY(${mousePos.x * 0.03}deg)`,
               transition: 'transform 0.3s ease-out, box-shadow 0.7s, scale 0.7s',
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-[length:200%_100%] animate-shimmer" />
-            <span className="relative z-10 font-display text-lg md:text-2xl font-bold group-hover:scale-105 transition-all duration-500">מרגיש לך נכון לצאת לדרך האור?</span>
-            <div className="relative z-10 flex items-center gap-3 md:gap-4">
-              <span className="font-display text-lg md:text-2xl font-bold group-hover:scale-105 transition-all duration-500">כאן</span>
-              <Heart className="w-6 h-6 md:w-8 md:h-8 transition-transform group-hover:scale-125 group-hover:fill-white/30" />
+            <span className="relative z-10 font-display text-base sm:text-lg md:text-2xl font-bold group-hover:scale-105 transition-all duration-500 text-center">מרגיש לך נכון לצאת לדרך האור?</span>
+            <div className="relative z-10 flex items-center gap-2 sm:gap-3 md:gap-4">
+              <span className="font-display text-base sm:text-lg md:text-2xl font-bold group-hover:scale-105 transition-all duration-500">כאן</span>
+              <Heart className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 transition-transform group-hover:scale-125 group-hover:fill-white/30" />
             </div>
             
             {/* Pulsing Ring */}
             <div className="absolute inset-0 rounded-[3rem] border-2 border-white/40 animate-ping opacity-0 group-hover:opacity-100" />
           </a>
+
+          {/* Image after CTA */}
+          <div className="mt-16 md:mt-20 flex justify-center px-4">
+            <div className="w-full max-w-xs h-96 sm:w-80 sm:h-96 md:w-[28rem] md:h-[35rem] lg:w-[32rem] lg:h-[40rem] rounded-[3rem] overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-500">
+              <img 
+                src={personalStoryImage} 
+                alt="מסע דרך האור" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

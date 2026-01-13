@@ -2,7 +2,10 @@ import { useState, useEffect, useRef } from 'react';
 import etiPortrait from '@/assets/eti-about.png';
 import { Sparkles, ArrowDownRight, Quote, Heart } from 'lucide-react';
 import { useScrollReveal, useStaggeredReveal } from '@/hooks/use-scroll-reveal';
-import aboutBackground from '@/assets/Back.png';
+import image1 from '@/assets/1.JPG';
+import image2 from '@/assets/2.JPG';
+import image4 from '@/assets/4.JPG';
+import image3 from '@/assets/3.JPG';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,7 +13,7 @@ const About = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [imageLoaded, setImageLoaded] = useState(false);
   const { ref: titleRef, isVisible: titleVisible } = useScrollReveal();
-  const { ref: cardsRef, visibleItems: cardsVisible } = useStaggeredReveal(4, 150);
+  const { ref: cardsRef, visibleItems: cardsVisible } = useStaggeredReveal(3, 150);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -45,23 +48,6 @@ const About = () => {
       className="section-padding relative overflow-hidden py-32 md:py-48"
       style={{ background: 'linear-gradient(to bottom, #faf9f5, #f0f0e8, #e8e8e0)' }}
     >
-      {/* Artistic Background Image Placement */}
-      <div className="absolute top-0 right-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-        {/* Large blended image positioned delicately */}
-        <div 
-          className="absolute -top-10 -right-10 md:-top-20 md:-right-20 w-[60%] md:w-[60%] opacity-[0.1] md:opacity-[0.15] rotate-3 transition-transform duration-1000 hover:scale-105"
-        >
-          <img 
-            src={aboutBackground} 
-            alt="" 
-            className="w-full h-auto object-contain rounded-[3rem]"
-            style={{
-              maskImage: 'linear-gradient(to bottom left, black 40%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom left, black 40%, transparent 100%)'
-            }}
-          />
-        </div>
-      </div>
       
       {/* Decorative Modern Background */}
       <div className="absolute top-0 right-0 w-full h-full opacity-[0.02] pointer-events-none">
@@ -71,8 +57,8 @@ const About = () => {
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-32 items-center">
           
-          {/* Visual Canvas - 5 Columns */}
-          <div className="lg:col-span-5 relative order-2 lg:order-1 px-4 sm:px-0">
+          {/* Visual Canvas - 1 Column */}
+          <div className="lg:col-span-1 relative order-2 lg:order-1 px-4 sm:px-0 max-w-md md:max-w-lg mx-auto">
             <div 
               className="relative z-10 transition-all duration-700 ease-out"
               style={{ 
@@ -111,9 +97,9 @@ const About = () => {
               >
                 <div className="flex flex-col items-center text-center">
                   <span className="font-numeric text-4xl md:text-6xl font-bold text-primary mb-1 md:mb-2 group-hover:scale-110 transition-transform duration-500">15</span>
-                  <span className="font-body text-[8px] md:text-[10px] font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] text-secondary">שנות ניסיון</span>
+                  <span className="font-body text-xs md:text-sm font-extrabold uppercase tracking-[0.2em] md:tracking-[0.3em] text-primary">שנות ניסיון</span>
                   <div className="w-10 h-0.5 md:w-12 md:h-px bg-gradient-gold mt-4 md:mt-6 group-hover:w-16 md:group-hover:w-20 transition-all duration-500" />
-                  <Heart className="w-4 h-4 mt-3 text-primary/40 group-hover:text-primary group-hover:fill-primary/20 transition-all duration-500" />
+                  <Heart className="w-6 h-6 md:w-8 md:h-8 mt-3 text-primary group-hover:scale-110 group-hover:fill-primary/20 transition-all duration-500" />
                 </div>
               </div>
             </div>
@@ -122,10 +108,20 @@ const About = () => {
             <div className="absolute -top-10 md:-top-20 -right-10 md:-right-20 w-32 h-32 md:w-64 md:h-64 bg-secondary/10 rounded-full blur-2xl md:blur-3xl animate-pulse-slow" />
           </div>
 
-          {/* Narrative Side - 7 Columns */}
-          <div className="lg:col-span-7 space-y-12 md:space-y-16 order-1 lg:order-2">
+          {/* Narrative Side - 11 Columns */}
+          <div className="lg:col-span-11 space-y-12 md:space-y-16 order-1 lg:order-2">
             <div className={`space-y-8 md:space-y-10 transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
-              <div className="flex items-center gap-4 group">
+              <div className="flex items-center gap-4 group relative">
+                {/* Image on the left side */}
+                <div className="hidden md:block absolute left-40 lg:left-60 top-1/2 -translate-y-1/2 w-96 lg:w-[28rem] group-hover:scale-105 transition-transform duration-500">
+                  <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white/70 -rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                    <img 
+                      src={image3} 
+                      alt="" 
+                      className="w-full h-auto aspect-square object-cover"
+                    />
+                  </div>
+                </div>
                 <span className="text-primary font-body text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] py-2 px-4 bg-primary/5 rounded-full group-hover:bg-primary/10 group-hover:scale-105 transition-all duration-500">
                   הכירו אותי
                 </span>
@@ -134,18 +130,20 @@ const About = () => {
 
               <h2 
                 ref={titleRef as React.RefObject<HTMLHeadingElement>}
-                className={`font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] md:leading-[1] tracking-tighter transition-all duration-1000 px-4 text-center md:text-right ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                className={`font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] md:leading-[1] tracking-tighter transition-all duration-1000 px-6 md:px-8 text-center md:text-right ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               >
-                מרחב של <br />
-                <span className="text-gradient-gold italic font-medium inline-block hover:scale-105 transition-transform duration-500 cursor-default">
-                  הקשבה וריפוי
+                שילוב של <br />
+                <span className="text-gradient-gold italic font-medium inline-block hover:scale-105 transition-transform duration-500 cursor-default pr-2">
+                  קליני ורוחני
                 </span>
               </h2>
 
               <div className="grid md:grid-cols-2 gap-8 md:gap-12 pt-4 md:pt-8">
                 <div className="space-y-4 md:space-y-6">
                   <p className="text-xl md:text-2xl text-foreground font-body font-light leading-relaxed" style={{ letterSpacing: '0.02em' }}>
-                    אני אתי אסתר דיין, מובילת התוכנית. אני מגיעה עם ניסיון חיים אישי ומקצועי עשיר ומגוון שמשלב עולמות שונים.
+                    אני אתי אסתר דיין, מובילת התוכנית. <br />
+                    אני מגיעה עם ניסיון חיים אישי ומקצועי עשיר ומגוון שמשלב עולמות שונים. <br />
+                    המסע שלי בעולם הטיפול התחיל מתוך חיפוש אישי אחר ריפוי ושלמות.
                   </p>
                   <div className="flex items-center gap-3 text-secondary group cursor-default">
                     <ArrowDownRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -154,7 +152,7 @@ const About = () => {
                 </div>
                 
                 <p className="text-base md:text-lg text-foreground/60 font-body leading-relaxed">
-                  <span className="font-numeric">33</span> שנות חינוך, אמא וסבתא עם הבנה עמוקה של תהליכים משפחתיים, ומסע אישי של ריפוי שהפך לדרך מקצועית של ליווי במסעות ריפוי אישיים.
+                  אשת חינוך, אמא וסבתא עם הבנה עמוקה של תהליכים משפחתיים, ומסע אישי של ריפוי שהפך לדרך מקצועית של ליווי במסעות ריפוי אישיים.
                 </p>
               </div>
             </div>
@@ -183,7 +181,7 @@ const About = () => {
                       <p className="text-sm md:text-base text-foreground/75 font-body font-medium">
                         {item.hasNumber ? (
                           <>
-                            כ־<span className="font-numeric">33</span> שנים של עבודה עם אנשים
+                            כ־<span className="font-bold">33</span> שנים של עבודה עם אנשים
                           </>
                         ) : item.detail}
                       </p>
@@ -193,39 +191,26 @@ const About = () => {
               </div>
             </div>
 
-            {/* Professional Background Section */}
+            {/* Professional Background Section - Image Gallery */}
             <div 
               ref={cardsRef as React.RefObject<HTMLDivElement>}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3"
+              className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4 max-w-2xl mx-auto"
             >
-              {[
-                { label: 'תרפיה באומנות', desc: 'עבודה עם רגשות', icon: Sparkles },
-                { label: 'הילינג', desc: 'עץ החיים ומודל היזכרות', icon: Sparkles },
-                { label: 'תנועה נשית', desc: 'חיבור לגוף', icon: Sparkles },
-                { label: 'סאונד הילינג', desc: 'צלילים ותדרי ריפוי', icon: Sparkles }
-              ].map((item, i) => (
+              {[image1, image2, image4].map((imgSrc, i) => (
                 <div 
                   key={i} 
-                  className={`group p-3 md:p-3 rounded-lg bg-white/90 backdrop-blur-sm border border-primary/20 hover:border-primary/40 hover:shadow-md transition-all duration-700 hover:-translate-y-1 hover:rotate-1 cursor-default text-center ${cardsVisible[i] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+                  className={`group relative transition-all duration-700 hover:-translate-y-1 cursor-default ${cardsVisible[i] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
                   style={{ transitionDelay: `${i * 150}ms` }}
                 >
-                  <div className="w-8 h-8 md:w-9 md:h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-2 mx-auto group-hover:bg-primary group-hover:text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                    <item.icon className="w-4 h-4 md:w-5 md:h-5 group-hover:animate-pulse" />
+                  <div className="relative rounded-xl overflow-hidden shadow-md border-2 border-white/70 group-hover:border-white/90 group-hover:shadow-lg transition-all duration-500 rotate-1 group-hover:rotate-0">
+                    <img 
+                      src={imgSrc} 
+                      alt={`טיפול ${i + 1}`}
+                      className="w-full h-auto aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    {/* Subtle gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
-                  <h4 className="font-display text-base md:text-lg font-bold text-foreground/95 mb-1 group-hover:text-primary transition-colors duration-500 drop-shadow-sm">
-                    {item.label}
-                  </h4>
-                  <p className="font-body text-[10px] md:text-[11px] text-foreground/70 font-bold uppercase tracking-widest group-hover:text-foreground/90 transition-colors duration-500">
-                    {item.label === 'הילינג' ? (
-                      <>
-                        עץ החיים <br />
-                        ומודל היזכרות
-                      </>
-                    ) : item.desc}
-                  </p>
-                  
-                  {/* Decorative corner on hover */}
-                  <div className="absolute top-1.5 right-1.5 w-0 h-0 border-t border-r border-primary/0 group-hover:w-2.5 group-hover:h-2.5 group-hover:border-primary/40 transition-all duration-500" />
                 </div>
               ))}
             </div>

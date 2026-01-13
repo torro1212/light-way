@@ -1,6 +1,5 @@
 import { Heart, Sparkles, Shield, Leaf, Quote, MousePointer2 } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
-import differentiationBackground from '@/assets/Differentiation.jpg';
 
 const values = [
   {
@@ -52,20 +51,6 @@ const Differentiation = () => {
       className="section-padding relative overflow-hidden py-32 md:py-48"
       style={{ background: 'linear-gradient(to bottom, #e8e8e0, #f0f0e8, #faf9f5)' }}
     >
-      {/* Artistic Background Image Placement */}
-      <div className="absolute bottom-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-         <div className="absolute -bottom-10 -left-10 md:-bottom-20 md:-left-20 w-[60%] md:w-[50%] opacity-[0.15] md:opacity-[0.2] rotate-12 transition-transform duration-1000 hover:rotate-6">
-           <img 
-            src={differentiationBackground} 
-            alt="" 
-            className="w-full h-auto object-contain rounded-[3rem] shadow-2xl"
-             style={{
-              maskImage: 'linear-gradient(to top right, black 40%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to top right, black 40%, transparent 100%)'
-            }}
-          />
-        </div>
-      </div>
       
       {/* Dynamic Modern Background */}
       <div className="absolute inset-0 z-0">
