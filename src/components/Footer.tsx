@@ -35,9 +35,9 @@ const Footer = () => {
             </p>
             <div className="flex justify-center md:justify-start gap-4">
               {[
-                { icon: Instagram, href: 'https://instagram.com/eti.dayan' },
-                { icon: Facebook, href: 'https://facebook.com/share' },
-                { icon: Mail, href: 'mailto:eti.dayan@gmail.com' }
+                { icon: Instagram, href: 'https://www.instagram.com/eti.dayan' },
+                { icon: Facebook, href: 'https://www.facebook.com/tystrdyyn' },
+                { icon: Mail, href: 'mailto:Etidayan246@gmail.com' }
               ].map((social, i) => (
                 <a
                   key={i}

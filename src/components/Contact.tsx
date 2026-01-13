@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, MessageCircle, Instagram, Facebook, Globe, ArrowUpLeft, Quote, Sparkles, Heart, Stars, Wind, Flower2 } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Instagram, Facebook, ArrowUpLeft, Quote, Sparkles, Heart, Stars, Wind, Flower2 } from 'lucide-react';
 import { useScrollReveal, useStaggeredReveal } from '@/hooks/use-scroll-reveal';
 import { useState, useEffect } from 'react';
 import contactBackground from '@/assets/Contact.png';
@@ -162,18 +162,24 @@ const Contact = () => {
               </a>
               
               <p className="text-sm md:text-base text-foreground/50 font-body text-center sm:text-right">
-                כתבי הודעה, ואשמח לחזור אלייך 🤍
+                כתבו הודעה, ואשמח לחזור אלייכם 🤍
               </p>
 
               <div className="flex gap-4">
-                {[Instagram, Facebook, Globe].map((Icon, i) => (
+                {[
+                  { icon: Instagram, href: 'https://www.instagram.com/eti.dayan' },
+                  { icon: Facebook, href: 'https://www.facebook.com/tystrdyyn' },
+                  { icon: Mail, href: 'mailto:Etidayan246@gmail.com' }
+                ].map((social, i) => (
                   <a
                     key={i}
-                    href="#"
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 md:w-14 md:h-14 rounded-2xl border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white hover:border-primary hover:scale-110 hover:rotate-12 transition-all duration-500 shadow-sm hover:shadow-card"
                     style={{ transitionDelay: `${i * 50}ms` }}
                   >
-                    <Icon className="w-5 h-5 group-hover:animate-pulse" />
+                    <social.icon className="w-5 h-5 group-hover:animate-pulse" />
                   </a>
                 ))}
               </div>
