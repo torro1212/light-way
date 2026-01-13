@@ -353,7 +353,7 @@ const Services = () => {
               052-617-2932
             </p>
             <p className="mt-2 text-sm md:text-base text-foreground/50 font-body">
-              כתבי הודעה, ואשמח לחזור אלייך 🤍
+            כתבו הודעה, ואשמח לחזור אלייכם 🤍
             </p>
           </div>
         </div>

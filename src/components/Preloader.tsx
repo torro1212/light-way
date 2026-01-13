@@ -149,7 +149,7 @@ const Preloader = () => {
           </h1>
           
           <p className="font-body text-sm md:text-base uppercase tracking-[0.3em] text-secondary/70 animate-fade-in" style={{ animationDelay: '0.5s', animationFillMode: 'both' }}>
-            פסיכותרפיה • סאונד הילינג • מעגלי נשים
+            פסיכותרפיה • סאונד הילינג • מעגלי הקשבה וריפוי
           </p>
         </div>
 
