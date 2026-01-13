@@ -112,7 +112,7 @@ const About = () => {
           <div className="lg:col-span-11 space-y-12 md:space-y-16 order-1 lg:order-2">
             <div className={`space-y-8 md:space-y-10 transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
               <div className="flex items-center gap-4 group relative">
-                {/* Image on the left side */}
+                {/* Image on the left side - hidden on mobile, visible on desktop */}
                 <div className="hidden md:block absolute left-40 lg:left-60 top-1/2 -translate-y-1/2 w-96 lg:w-[28rem] group-hover:scale-105 transition-transform duration-500">
                   <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white/70 -rotate-3 group-hover:rotate-0 transition-transform duration-500">
                     <img 
@@ -126,6 +126,19 @@ const About = () => {
                   הכירו אותי
                 </span>
                 <div className="flex-1 h-px bg-gradient-to-l from-primary/30 to-transparent group-hover:from-primary/60 transition-all duration-700" />
+              </div>
+
+              {/* Mobile Image - centered below title */}
+              <div className="md:hidden flex justify-center mb-8">
+                <div className="w-64 sm:w-80 group-hover:scale-105 transition-transform duration-500">
+                  <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white/70 -rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                    <img 
+                      src={image3} 
+                      alt="" 
+                      className="w-full h-auto aspect-square object-cover"
+                    />
+                  </div>
+                </div>
               </div>
 
               <h2 
