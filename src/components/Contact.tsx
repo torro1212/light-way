@@ -162,7 +162,7 @@ const Contact = () => {
               </a>
               
               <p className="text-sm md:text-base text-foreground/50 font-body text-center sm:text-right">
-                כתבו הודעה, ואשמח לחזור אלייכם 🤍
+                כתבו הודעה, ואשמח לחזור אליכם 🤍
               </p>
 
               <div className="flex gap-4">
