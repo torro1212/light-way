@@ -133,7 +133,7 @@ const Contact = () => {
                     <MessageCircle className="w-6 h-6" />
                   </div>
                   <p className="font-body text-[10px] font-bold uppercase tracking-[0.4em] text-secondary mb-2">וואטסאפ</p>
-                  <a href="https://wa.me/972526172932" target="_blank" rel="noopener noreferrer" className="font-numeric text-2xl font-bold text-foreground hover:text-primary transition-colors" dir="ltr">052-617-2932</a>
+                  <a href="https://wa.me/972526172932?text=היי%2C%0Aהגעתי%20דרך%20אתר%20%22דרך%20האור%22%20✨%0Aאשמח%20לשוחח%20ולשמוע%20על%20התהליך%20והאפשרויות" target="_blank" rel="noopener noreferrer" className="font-numeric text-2xl font-bold text-foreground hover:text-primary transition-colors" dir="ltr">052-617-2932</a>
                 </div>
               </div>
             </div>
@@ -141,7 +141,7 @@ const Contact = () => {
             {/* Social & CTA Section */}
             <div className="flex flex-col sm:flex-row items-center gap-8 md:gap-10 pt-4 md:pt-8">
               <a
-                href="https://wa.me/972526172932"
+                href="https://wa.me/972526172932?text=היי%2C%0Aהגעתי%20דרך%20אתר%20%22דרך%20האור%22%20✨%0Aאשמח%20לשוחח%20ולשמוע%20על%20התהליך%20והאפשרויות"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative px-10 py-6 md:px-12 md:py-6 rounded-full bg-primary text-white font-bold text-lg md:text-xl transition-all duration-500 hover:scale-105 hover:shadow-[0_20px_60px_rgba(var(--primary),0.4)] overflow-hidden flex items-center justify-center gap-4 w-full sm:w-auto ripple-effect"

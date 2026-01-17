@@ -229,7 +229,7 @@ const Hero = () => {
             {/* Enhanced CTA Buttons */}
             <div className={`flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-10 w-full px-4 sm:px-6 md:px-8 transition-all duration-1000 delay-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} max-w-4xl mx-auto`}>
               <a
-                href="https://wa.me/972526172932"
+                href="https://wa.me/972526172932?text=היי%2C%0Aהגעתי%20דרך%20אתר%20%22דרך%20האור%22%20✨%0Aאשמח%20לשוחח%20ולשמוע%20על%20התהליך%20והאפשרויות"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative px-4 py-3 sm:px-8 sm:py-4 md:px-12 md:py-6 lg:px-16 lg:py-8 rounded-full bg-gradient-to-r from-primary to-primary/90 text-white font-bold text-sm sm:text-base md:text-lg lg:text-2xl transition-all duration-500 overflow-hidden w-full sm:flex-1 sm:max-w-md border-2 border-white/20 shadow-lg"

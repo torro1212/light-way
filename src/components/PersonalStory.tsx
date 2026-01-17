@@ -307,7 +307,7 @@ const PersonalStory = () => {
                 הסיפור האישי שלי כולל מסע מרתק של ריפוי עצמי ממחלה אוטואימונית, תהליך של גילוי חוכמת הגוף והכוח הפנימי לריפוי. חוויותיי האישיות והמקצועיות מאפשרות לי להוביל אותך במסע הזה בביטחון, הקשבה ותמיכה לאורך כל הדרך.
               </p>
               <a
-                href="https://wa.me/972526172932"
+                href="https://wa.me/972526172932?text=היי%2C%0Aהגעתי%20דרך%20אתר%20%22דרך%20האור%22%20✨%0Aאשמח%20לשוחח%20ולשמוע%20על%20התהליך%20והאפשרויות"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/cta inline-flex items-center justify-center gap-4 px-10 py-5 md:px-12 md:py-6 rounded-full bg-primary text-white font-bold text-lg md:text-xl hover:scale-105 transition-all duration-400 shadow-lg hover:shadow-[0_20px_60px_rgba(var(--primary),0.35)] w-full sm:w-auto ripple-effect relative overflow-hidden"

@@ -218,7 +218,7 @@ const Testimonials = () => {
         {/* CTA to WhatsApp */}
         <div className="mt-20 md:mt-32 text-center px-4">
           <a
-            href="https://wa.me/972526172932"
+            href="https://wa.me/972526172932?text=היי%2C%0Aהגעתי%20דרך%20אתר%20%22דרך%20האור%22%20✨%0Aאשמח%20לשוחח%20ולשמוע%20על%20התהליך%20והאפשרויות"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-4 py-5 sm:py-6 md:py-8 px-6 sm:px-8 md:px-12 bg-primary rounded-[3rem] text-white overflow-hidden relative shadow-2xl hover:scale-110 transition-all duration-700 w-full sm:w-auto cursor-pointer hover:shadow-[0_30px_80px_rgba(var(--primary),0.4)] max-w-md sm:max-w-none mx-auto"

@@ -88,7 +88,7 @@ const Header = () => {
             </div>
             
             <a
-              href="https://wa.me/972526172932"
+              href="https://wa.me/972526172932?text=היי%2C%0Aהגעתי%20דרך%20אתר%20%22דרך%20האור%22%20✨%0Aאשמח%20לשוחח%20ולשמוע%20על%20התהליך%20והאפשרויות"
               target="_blank"
               rel="noopener noreferrer"
               className={`group flex items-center gap-4 px-8 py-3.5 rounded-full font-bold text-xs tracking-widest transition-all duration-500 ${
@@ -141,7 +141,7 @@ const Header = () => {
             <div className="mt-auto space-y-6 pb-12">
               <p className="text-muted-foreground text-center font-body text-sm">זמינה עבורך לכל שאלה</p>
               <a
-                href="https://wa.me/972526172932"
+                href="https://wa.me/972526172932?text=היי%2C%0Aהגעתי%20דרך%20אתר%20%22דרך%20האור%22%20✨%0Aאשמח%20לשוחח%20ולשמוע%20על%20התהליך%20והאפשרויות"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold flex items-center justify-center gap-4 w-full py-6 text-xl rounded-[2rem]"

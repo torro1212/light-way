@@ -143,11 +143,13 @@ const Services = () => {
             </h2>
             
             <p className="font-display text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-foreground/95 italic font-normal mb-3 sm:mb-4 md:mb-6 px-4 sm:px-6 text-center drop-shadow-sm">
-              מסע ריפוי אישי וקבוצתי למתמודדים עם מחלה אוטואימונית
+              תוכנית ליווי אישית וקבוצתית 
+מרחב הקשבה וליווי רגשי-רוחני
+למי שחיים עם אתגר גופני מתמשך
             </p>
 
             <p className="font-display text-xl md:text-3xl lg:text-4xl text-gradient-gold italic font-medium mb-4 drop-shadow-md">
-              לגלות את החוכמה הפנימית של הגוף
+              להעמיק בהקשבה לחוכמה הפנימית של הגוף
             </p>
             
             <p className="text-lg md:text-xl text-foreground/80 font-body font-medium bg-white/50 inline-block px-5 py-2 rounded-xl" style={{ letterSpacing: '0.02em' }}>
@@ -343,7 +345,7 @@ const Services = () => {
             </p>
             
             <a
-              href="https://wa.me/972526172932"
+              href="https://wa.me/972526172932?text=היי%2C%0Aהגעתי%20דרך%20אתר%20%22דרך%20האור%22%20✨%0Aאשמח%20לשוחח%20ולשמוע%20על%20התהליך%20והאפשרויות"
               className="inline-flex items-center justify-center gap-4 px-12 py-6 md:px-16 md:py-8 rounded-full bg-primary hover:bg-primary/90 text-white font-bold text-lg md:text-xl transition-all duration-500 hover:shadow-2xl hover:scale-105 group"
             >
               <span>📲 להרשמה ופרטים נוספים</span>

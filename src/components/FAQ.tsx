@@ -101,7 +101,7 @@ const FAQ = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-secondary/0 to-secondary/0 group-hover:from-secondary/5 group-hover:to-transparent transition-all duration-1000" />
             <p className="font-display text-xl md:text-2xl text-foreground/95 font-bold group-hover:text-secondary transition-colors duration-500 relative z-10 drop-shadow-sm">יש לך שאלה שלא מופיעה כאן?</p>
             <a
-              href="https://wa.me/972526172932"
+              href="https://wa.me/972526172932?text=היי%2C%0Aהגעתי%20דרך%20אתר%20%22דרך%20האור%22%20✨%0Aאשמח%20לשוחח%20ולשמוע%20על%20התהליך%20והאפשרויות"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold flex items-center justify-center gap-4 px-10 py-4 md:px-12 md:py-5 text-base md:text-lg group/btn w-full sm:w-auto relative z-10 hover:scale-110 transition-all duration-500 ripple-effect"

@@ -17,7 +17,7 @@ const FloatingCTA = () => {
 
   return (
     <a
-      href="https://wa.me/972526172932"
+      href="https://wa.me/972526172932?text=היי%2C%0Aהגעתי%20דרך%20אתר%20%22דרך%20האור%22%20✨%0Aאשמח%20לשוחח%20ולשמוע%20על%20התהליך%20והאפשרויות"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-8 left-8 z-50 group"

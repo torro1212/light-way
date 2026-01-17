@@ -81,7 +81,7 @@ const Footer = () => {
           <div className="lg:col-span-4 space-y-6 md:space-y-8 text-center md:text-right">
             <h4 className="font-display text-lg md:text-xl font-bold text-white">יצירת קשר</h4>
             <div className="space-y-4 md:space-y-6">
-              <a href="https://wa.me/972526172932" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start gap-4 group/contact">
+              <a href="https://wa.me/972526172932?text=היי%2C%0Aהגעתי%20דרך%20אתר%20%22דרך%20האור%22%20✨%0Aאשמח%20לשוחח%20ולשמוע%20על%20התהליך%20והאפשרויות" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start gap-4 group/contact">
                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-secondary group-hover/contact:bg-secondary group-hover/contact:text-white group-hover/contact:scale-110 group-hover/contact:rotate-12 transition-all duration-500">
                   <Phone className="w-4 h-4 group-hover/contact:animate-pulse" />
                 </div>
