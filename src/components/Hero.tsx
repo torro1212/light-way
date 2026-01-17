@@ -200,15 +200,15 @@ const Hero = () => {
             {/* Enhanced Subtitle */}
             <div className={`max-w-5xl mx-auto mb-6 sm:mb-8 md:mb-12 transition-all duration-1000 delay-800 px-4 sm:px-6 md:px-8 ${isLoaded ? 'opacity-100 blur-0 translate-y-0' : 'opacity-0 blur-sm translate-y-10'}`}>
               <p className="font-body text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-foreground/85 leading-relaxed text-balance font-normal transition-colors duration-500 text-center">
-                מסע ריפוי אישי וקבוצתי <br />
-                למתמודדים עם מחלה אוטואימונית
+                תוכנית ליווי אישית וקבוצתית <br />
+                למתמודדים עם אתגר גופני מתמשך
               </p>
               
               {/* Special Styled Tagline */}
               <div className="mt-4 sm:mt-6 md:mt-12 flex items-center justify-center gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4">
                 <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-white/90 drop-shadow-lg flex-shrink-0 animate-pulse" />
                 <p className="font-display text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-white italic font-bold drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] text-center">
-                  לגלות את החוכמה הפנימית של הגוף
+                  להעמיק בהקשבה לחוכמה הפנימית של הגוף
                 </p>
                 <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-white/90 drop-shadow-lg flex-shrink-0 animate-pulse" />
               </div>
